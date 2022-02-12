@@ -9,33 +9,20 @@ import {
     Image as Img,
 } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
-import { graphql, useStaticQuery } from "gatsby";
 
 // Images
 import { kai, bridgestone, gagnikel } from "../images";
 
 function Banner() {
-    const { teams } = useStaticQuery(graphql`
-        {
-            teams: allGraphCmsTeam {
-                nodes {
-                    id
-                    fullName
-                }
-            }
-        }
-    `);
-
     return (
         <Box id="home" as="section" variant="section.banner">
             <Container>
                 <Box sx={styles.contentWrapper}>
                     <Box sx={styles.content}>
-                        {teams.nodes.map(team => (
-                            <Heading sx={styles.title} key={team.id}>
-                                {team.fullName}
-                            </Heading>
-                        ))}
+                        <Heading sx={styles.title}>
+                            Layanan Konsultasi Lingkungan
+                        </Heading>
+
                         <Text as="p" sx={styles.text}>
                             Memberikan pelayanan profesional terbaik dengan
                             metode yang tepat, efisien dan efektif dari berbagai

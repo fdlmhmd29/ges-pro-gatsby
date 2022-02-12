@@ -1,55 +1,47 @@
 import React from "react";
 import { Box, Container, Flex, Heading, Text, Image } from "theme-ui";
+import { graphql, useStaticQuery } from "gatsby";
+import SectionHeading from "../components/section-header";
 
-// Images
-import image1 from "../images/sections/features/features-1.svg";
-import image2 from "../images/sections/features/features-2.svg";
-import image3 from "../images/sections/features/features-3.svg";
+function Features() {
+    const { features } = useStaticQuery(graphql`
+        {
+            features: allGraphCmsFeature {
+                nodes {
+                    id
+                    featureText
+                    featureTitle
+                    featureImage {
+                        url
+                    }
+                }
+            }
+        }
+    `);
 
-const FEATURES_DATA = {
-    title: "Go beyond ultimate features",
-    text: "Ideal solutions for you",
-    posts: [
-        {
-            image: image3,
-            title: "For Individuals",
-            text: "Get your info tests delivered at home collect a sample from the your pogress tests.",
-        },
-        {
-            image: image2,
-            title: "For Small Team",
-            text: "Get your info tests delivered at home collect a sample from the your pogress tests.",
-        },
-        {
-            image: image1,
-            title: "For Organization",
-            text: "Get your info tests delivered at home collect a sample from the your pogress tests.",
-        },
-    ],
-};
-const Features = () => {
-    const { title, text, posts } = FEATURES_DATA;
     return (
         <Box as="section" id="features" sx={styles.section}>
             <Container sx={styles.container}>
-                <Box sx={styles.sectionTitle}>
-                    <Text as="p">{text}</Text>
-                    <Heading as="h2">{title}</Heading>
-                </Box>
+                <SectionHeading
+                    title={"Melayani semua kebutuhan bisnis"}
+                    description={"Solusi ideal untuk bisnis Anda"}
+                />
                 <Flex sx={styles.flex}>
-                    {posts.map(({ image, title, text }, index) => (
-                        <Box sx={styles.post} key={`feature-post-key-${index}`}>
+                    {features.nodes.map(feature => (
+                        <Box sx={styles.post} key={feature.id}>
                             <Box className="image">
                                 <Image
                                     width="70"
                                     height="70"
-                                    src={image}
-                                    alt={title}
+                                    src={feature.featureImage.url}
+                                    alt={feature.featureTitle}
                                 />
                             </Box>
                             <Box sx={styles.postContent}>
-                                <Heading as="h3">{title}</Heading>
-                                <Text as="p">{text}</Text>
+                                <Heading as="h3">
+                                    {feature.featureTitle}
+                                </Heading>
+                                <Text as="p">{feature.featureText}</Text>
                             </Box>
                         </Box>
                     ))}
@@ -57,11 +49,35 @@ const Features = () => {
             </Container>
         </Box>
     );
-};
+}
 
 export default Features;
 
 const styles = {
+    heading: {
+        textAlign: "center",
+        maxWidth: 580,
+        margin: "0 auto 60px",
+    },
+    title: {
+        color: "heading",
+        fontWeight: 500,
+        fontSize: ["24px", "30px"],
+        lineHeight: [1.25, 1.5],
+        letterSpacing: "heading",
+        img: {
+            ml: ["15px"],
+            position: "relative",
+            top: "8px",
+            maxWidth: [25, null, null, "100%"],
+        },
+    },
+    description: {
+        color: "heading",
+        fontSize: ["14px", "16px"],
+        lineHeight: [1.85, 2.2],
+        mt: "10px",
+    },
     section: {
         overflow: "hidden",
         pt: ["70px", null, null, "100px"],

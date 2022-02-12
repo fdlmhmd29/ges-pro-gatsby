@@ -59,7 +59,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fonts: [`IBM Plex Sans\:400,400i,700,700i`],
+                fonts: [`IBM Plex Sans\:400, 400i, 500, 600, 700, 700i`],
                 display: "swap",
             },
         },
