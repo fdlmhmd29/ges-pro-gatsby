@@ -8,23 +8,12 @@ const theme = {
         background: "#FFFFFF", // body background color
         backgroundSecondary: "#F9FBFD", // secondary background color
         borderColor: "#F3F4F5", // border color
-        primary: "#28DDB2", // primary button and link color
+        primary: "#26b600", // primary button and link color
         secondary: "#EF9E48", // secondary color - can be used for hover states
         muted: "#7B8188", // muted color
         accent: "#609", // a contrast color for emphasizing UI
         dark: "#10132D",
         link: "#4F96FF", // default link color
-
-        // highlight	a background color for highlighting text
-        modes: {
-            dark: {
-                text: "#fff",
-                background: "#000",
-                primary: "#0cf",
-                secondary: "#09c",
-                muted: "#111",
-            },
-        },
     },
     fonts: {
         body: "IBM Plex Sans",

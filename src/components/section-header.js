@@ -1,7 +1,7 @@
 /** @jsxRuntime classic /
 /** @jsx jsx */
-import { jsx, Box, Heading, Text, Image } from "theme-ui";
 import React from "react";
+import { jsx, Box, Heading, Text, Image } from "theme-ui";
 
 const SectionHeading = ({ title, slogan, description, emoji, ...props }) => {
     return (
@@ -38,7 +38,7 @@ const styles = {
     },
     title: {
         color: "heading",
-        fontWeight: 500,
+        fontWeight: "bold",
         fontSize: ["24px", "30px"],
         lineHeight: [1.25, 1.5],
         letterSpacing: "heading",
