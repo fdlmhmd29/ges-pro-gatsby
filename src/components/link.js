@@ -31,8 +31,8 @@ export function Link({ path, label, children, ...rest }) {
 
 export function LearnMore({ path, label, children, ...rest }) {
     return (
-        <A to={path} sx={styles.learnMore} {...rest}>
-            {label ?? "Learn More"} <HiOutlineChevronRight />
+        <A href={path} sx={styles.learnMore} {...rest}>
+            {label ?? "Pelajari Selengkapnya"} <HiOutlineChevronRight />
         </A>
     );
 }
@@ -40,6 +40,7 @@ export function LearnMore({ path, label, children, ...rest }) {
 const styles = {
     learnMore: {
         color: "link",
+        textDecoration: "none",
         cursor: "pointer",
         fontWeight: 500,
         display: "inline-flex",

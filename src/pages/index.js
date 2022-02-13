@@ -6,12 +6,14 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Banner from "../section/banner";
 import Features from "../section/features";
+import Services from "../section/services";
 
 const IndexPage = () => (
     <Layout>
         <Seo title="Home" />
         <Banner />
         <Features />
+        <Services />
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>

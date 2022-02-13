@@ -3,10 +3,9 @@ import { jsx, Image } from "theme-ui";
 
 // Components
 import { Link } from "./link";
-import logo from "../images/logo.png";
-import logoWhite from "../images/logo-white.png";
+import { Logo, LogoWhite } from "../images";
 
-export default function Logo({ isWhite }) {
+export default function MainLogo({ isWhite }) {
     return (
         <Link
             path="/"
@@ -15,7 +14,7 @@ export default function Logo({ isWhite }) {
             }}
         >
             <Image
-                src={isWhite ? logoWhite : logo}
+                src={isWhite ? LogoWhite : Logo}
                 alt="startup landing logo"
             />
         </Link>
