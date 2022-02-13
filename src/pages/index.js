@@ -7,6 +7,9 @@ import Seo from "../components/seo";
 import Banner from "../section/banner";
 import Features from "../section/features";
 import Services from "../section/services";
+import Profile from "../section/profile";
+
+import "react-modal-video/css/modal-video.min.css";
 
 const IndexPage = () => (
     <Layout>
@@ -14,6 +17,7 @@ const IndexPage = () => (
         <Banner />
         <Features />
         <Services />
+        <Profile />
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>

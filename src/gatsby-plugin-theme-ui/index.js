@@ -97,7 +97,9 @@ const theme = {
         },
     },
     section: {
-        banner: {},
+        services: {
+            pb: ["90px", null, 9, null, null, 10, null, "150px"],
+        },
         ultimateFeature: {
             pt: [0, 7, 7, 8, 8, 7, 7],
             pb: [7, 7, 7, 8, 9, 130, 150],
