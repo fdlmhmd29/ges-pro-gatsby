@@ -24,7 +24,7 @@ const styles = {
     },
     value: {
         color: "heading",
-        fontSize: [4, null, null, 10, null, 4],
+        fontSize: [4, null, null, 10, null, 5],
         display: "flex",
         justifyContent: "center",
         lineHeight: 1.38,

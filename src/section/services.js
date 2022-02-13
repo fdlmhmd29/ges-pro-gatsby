@@ -81,8 +81,8 @@ export default Services;
 const styles = {
     section: {
         backgroundColor: "#e2ffda",
-        pt: [5, null, null, 8, 10, null, 6],
-        pb: [5, null, null, null, 10, null, 6],
+        pt: [6, null, null, 8, 10, null, 6],
+        pb: [6, null, null, null, 10, null, 6],
     },
     serviceGrid: {
         backgroundColor: "white",
@@ -98,13 +98,13 @@ const styles = {
             "repeat(3, 258px)",
             "repeat(3, 300px)",
         ],
-        pt: [7, null, null, 7],
-        pb: [7, null, null, 7],
+        pt: [6, null, null, 7],
+        pb: [6, null, null, 7],
     },
     statsGrid: {
         gap: [6, null, null, "60px 30px", "60px 80px", "60px 110px"],
         justifyContent: "center",
-        pt: [7, null, null, 6],
+        pt: [5, null, null, 6],
         gridTemplateColumns: [
             "repeat(2, 120px)",
             null,
