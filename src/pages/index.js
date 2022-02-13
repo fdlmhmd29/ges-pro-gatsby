@@ -10,6 +10,7 @@ import Services from "../section/services";
 import Profile from "../section/profile";
 
 import "react-modal-video/css/modal-video.min.css";
+import TeamSection from "../section/team-section";
 
 const IndexPage = () => (
     <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
         <Features />
         <Services />
         <Profile />
+        <TeamSection />
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
