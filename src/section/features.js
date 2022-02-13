@@ -80,8 +80,9 @@ const styles = {
     },
     section: {
         overflow: "hidden",
-        pt: ["70px", null, null, "100px"],
-        pb: ["40px", null, null, "70px"],
+        backgroundColor: "white",
+        pt: [6, null, null, 8, 10, null, 6],
+        pb: [6, null, null, null, 10, null, 6],
     },
     container: {},
     flex: {
