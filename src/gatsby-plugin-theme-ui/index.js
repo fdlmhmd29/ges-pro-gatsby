@@ -6,7 +6,7 @@ const theme = {
         heading: "#0F2137", // primary heading color
         headingSecondary: "#343D48", // heading color
         background: "#FFFFFF", // body background color
-        backgroundSecondary: "#F9FBFD", // secondary background color
+        backgroundSecondary: "#e2ffda", // secondary background color
         borderColor: "#F3F4F5", // border color
         primary: "#26b600", // primary button and link color
         secondary: "#EF9E48", // secondary color - can be used for hover states
@@ -97,6 +97,11 @@ const theme = {
         },
     },
     section: {
+        news: {
+            backgroundColor: "backgroundSecondary",
+            pt: [7, 7, 7, 7, 8],
+            pb: [7, 7, 7, 7, 8],
+        },
         services: {
             pb: ["90px", null, 9, null, null, 10, null, "150px"],
         },
@@ -146,6 +151,17 @@ const theme = {
         },
     },
     links: {
+        blog: {
+            display: "block",
+            px: 0,
+            color: "inherit",
+            textDecoration: "none",
+            fontSize: "inherit",
+            transition: "color 0.25s",
+            "&:hover": {
+                color: "primary",
+            },
+        },
         bold: {
             fontWeight: "bold",
         },

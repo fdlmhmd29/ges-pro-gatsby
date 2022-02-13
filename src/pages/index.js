@@ -9,8 +9,10 @@ import Features from "../section/features";
 import Services from "../section/services";
 import Profile from "../section/profile";
 
+import "react-multi-carousel/lib/styles.css";
 import "react-modal-video/css/modal-video.min.css";
 import TeamSection from "../section/team-section";
+import BlogSection from "../section/blog-section";
 
 const IndexPage = () => (
     <Layout>
@@ -20,6 +22,7 @@ const IndexPage = () => (
         <Services />
         <Profile />
         <TeamSection />
+        <BlogSection />
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
