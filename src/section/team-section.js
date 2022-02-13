@@ -20,7 +20,7 @@ function TeamSection() {
     `);
 
     return (
-        <section>
+        <section sx={styles.section}>
             <Container>
                 <SectionHeading
                     title="Team Kami"
@@ -46,6 +46,10 @@ function TeamSection() {
 export default TeamSection;
 
 const styles = {
+    section: {
+        pt: [7, 7, 7, 7, 8],
+        pb: [7, 7, 7, 7, 8],
+    },
     grid: {
         mt: [0, null, -6, null, -4],
         gridGap: ["35px 0px", null, 0, null, null, "30px 35px"],

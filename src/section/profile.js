@@ -116,8 +116,8 @@ const playPluse = keyframes`
 
 const styles = {
     profile: {
-        pt: [6, null, null, 8, 10, null, 7],
-        pb: [6, null, null, null, 10, null, 6],
+        pt: [7, 7, 7, 7, 8],
+        pb: [7, 7, 7, 7, 0],
     },
     coreFeature: {
         py: [0, null, null, 2, null, 7],
