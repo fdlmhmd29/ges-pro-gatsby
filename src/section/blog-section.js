@@ -9,48 +9,7 @@ import PostCard from "../components/cards/post-card";
 import ButtonGroup from "../components/button-group";
 
 // Images
-import PostThumb1 from "../images/sections/blog/1.jpg";
-import PostThumb2 from "../images/sections/blog/2.jpg";
-import PostThumb3 from "../images/sections/blog/3.jpg";
-
-const data = [
-    {
-        id: 1,
-        imgSrc: PostThumb1,
-        altText: "Marketing",
-        postLink: "#",
-        title: "Product Marketing: Monopoly Market",
-        authorName: "Cali Cartel",
-        date: "Oct 20, 2020",
-    },
-    {
-        id: 2,
-        imgSrc: PostThumb2,
-        altText: "Creative",
-        postLink: "#",
-        title: "Product Marketing: Creative Market",
-        authorName: "James Carter",
-        date: "Oct 20, 2020",
-    },
-    {
-        id: 3,
-        imgSrc: PostThumb3,
-        altText: "Startup",
-        postLink: "#",
-        title: "Product Marketing: Startup Product Sales",
-        authorName: "Aston Aagar",
-        date: "Oct 20, 2020",
-    },
-    {
-        id: 4,
-        imgSrc: PostThumb2,
-        altText: "Creative",
-        postLink: "#",
-        title: "Product Marketing: Creative Market",
-        authorName: "James Carter",
-        date: "Oct 20, 2020",
-    },
-];
+import { graphql, useStaticQuery } from "gatsby";
 
 const responsive = {
     desktop: {
@@ -75,7 +34,26 @@ const responsive = {
     },
 };
 
-export default function BlogSection() {
+function BlogSection() {
+    const { posts } = useStaticQuery(graphql`
+        {
+            posts: allGraphCmsPost {
+                nodes {
+                    author {
+                        name
+                    }
+                    createdAt
+                    featuredImage {
+                        url
+                    }
+                    id
+                    slug
+                    title
+                }
+            }
+        }
+    `);
+
     return (
         <section sx={{ variant: "section.news" }}>
             <Container>
@@ -107,15 +85,15 @@ export default function BlogSection() {
                         sliderClass=""
                         slidesToSlide={1}
                     >
-                        {data.map(item => (
+                        {posts.nodes.map(post => (
                             <PostCard
-                                key={item.id}
-                                src={item.imgSrc}
-                                alt={item.altText}
-                                postLink={item.postLink}
-                                title={item.title}
-                                authorName={item.authorName}
-                                date={item.date}
+                                key={post.id}
+                                src={post.featuredImage.url}
+                                alt={post.title}
+                                postLink={post.slug}
+                                title={post.title}
+                                authorName={post.author.name}
+                                date={post.createdAt}
                             />
                         ))}
                     </Carousel>
@@ -124,6 +102,8 @@ export default function BlogSection() {
         </section>
     );
 }
+
+export default BlogSection;
 
 const styles = {
     carouselWrapper: {

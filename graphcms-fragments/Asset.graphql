@@ -39,6 +39,34 @@ fragment Asset on Asset {
       stage
     }
   }
+  featureImageFeature {
+    ... on Feature {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  featuredImageServicePost {
+    ... on ServicePost {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  iconServicePost {
+    ... on ServicePost {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  photoAuthor {
+    ... on Author {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
   scheduledIn {
     ... on ScheduledOperation {
       remoteTypeName: __typename

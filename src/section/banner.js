@@ -88,7 +88,7 @@ const Banner = () => {
     };
 
     return (
-        <Box id="home" as="section" variant="section.banner">
+        <Box id="home" as="section">
             <Container>
                 <Box sx={styles.contentWrapper}>
                     <Box sx={styles.content}>
@@ -170,7 +170,7 @@ const styles = {
         alignItems: "center",
         justifyContent: "center",
         minHeight: [null, null, null, null, null, "100vh"],
-        pt: [100, null, null, 120, 130, 120, 0],
+        pt: [100, null, null, 120, 130, 120, 5],
     },
     content: {
         maxWidth: [507, 507, 507, 324, 450],
@@ -212,7 +212,7 @@ const styles = {
     },
     rightContent: {
         position: "relative",
-        // mt: [6, 6, 6, 6, 6],
+        mt: [6, 6, 6, 6, 6],
         maxWidth: "100%",
         ".swiper-pagination-bullets": {
             bottom: 20,

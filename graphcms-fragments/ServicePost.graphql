@@ -5,6 +5,7 @@ fragment ServicePost on ServicePost {
   updatedAt
   publishedAt
   title
+  shortTitle
   slug
   excerpt
   content {
@@ -24,7 +25,6 @@ fragment ServicePost on ServicePost {
     }
   }
   postDate
-  shortTitle
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -46,6 +46,13 @@ fragment ServicePost on ServicePost {
       stage
     }
   }
+  author {
+    ... on Author {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
   featuredImage {
     ... on Asset {
       remoteTypeName: __typename
@@ -59,13 +66,6 @@ fragment ServicePost on ServicePost {
       remoteTypeName: __typename
       remoteId: id
       locale
-      stage
-    }
-  }
-  author {
-    ... on Author {
-      remoteTypeName: __typename
-      remoteId: id
       stage
     }
   }
