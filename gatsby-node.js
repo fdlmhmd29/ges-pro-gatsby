@@ -4,29 +4,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const { data } = await graphql(
     `
       {
-        pages: allGraphCmsPage {
-          nodes {
-            id
-            content {
-              markdownNode {
-                childMdx {
-                  body
-                }
-              }
-            }
-            seo {
-              description
-              image {
-                url
-              }
-              keywords
-              title
-            }
-            slug
-            title
-          }
-        }
-
         posts: allGraphCmsPost(sort: { fields: date, order: ASC }) {
           edges {
             nextPost: next {
@@ -95,37 +72,4 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/posts/${page.slug}`,
     });
   });
-
-  data.pages.nodes.forEach(page => {
-    createPage({
-      component: path.resolve("./src/templates/default-page.js"),
-      context: {
-        page,
-      },
-
-      path: `/${page.slug}`,
-    });
-  });
-};
-
-exports.createResolvers = ({ createTypes }) => {
-  const resolvers = {
-    GraphCMS_Post: {
-      date: {
-        type: "String",
-        resolve: source => {
-          const date = new Date(source.date);
-
-          return new Intl.DateTimeFormat("en-US", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }).format(date);
-        },
-      },
-    },
-  };
-
-  createTypes(resolvers);
 };
