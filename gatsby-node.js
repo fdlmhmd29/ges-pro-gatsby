@@ -108,10 +108,10 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   });
 };
 
-exports.createResolvers = ({ createTypes }) => {
+exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     GraphCMS_Post: {
-      date: {
+      formattedDate: {
         type: "String",
         resolve: source => {
           const date = new Date(source.date);
@@ -127,5 +127,5 @@ exports.createResolvers = ({ createTypes }) => {
     },
   };
 
-  createTypes(resolvers);
+  createResolvers(resolvers);
 };
