@@ -1,20 +1,20 @@
 const menuItems = [
-    {
-        path: "home",
-        label: "Home",
-    },
-    {
-        path: "ultimate-feature",
-        label: "Feature",
-    },
-    {
-        path: "pricing",
-        label: "Pricing",
-    },
-    {
-        path: "faq",
-        label: "Faq",
-    },
+  {
+    path: "home",
+    label: "Beranda",
+  },
+  {
+    path: "ultimate-feature",
+    label: "Jasa",
+  },
+  {
+    path: "pricing",
+    label: "Profil",
+  },
+  {
+    path: "faq",
+    label: "Blog",
+  },
 ];
 
 export default menuItems;

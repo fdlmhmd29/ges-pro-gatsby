@@ -1,99 +1,81 @@
 /** @jsx jsx */
-import { jsx, Box, Text, Container } from "theme-ui";
-import { rgba } from "polished";
-
-// Components
-import Logo from "../logo";
+import { jsx, Box, Container, Image, Text } from "theme-ui";
 import { Link } from "../link";
-import FooterWidget from "./footer-widget";
-import { menuItems, footerNav } from "./footer.data";
-
+import data from "./footer.data";
+import FooterLogo from "../../images/logo.png";
 export default function Footer() {
-    return (
-        <Box as="footer" variant="layout.footer">
-            <Container>
-                <Box sx={styles.footerTopInner}>
-                    {menuItems.map(({ id, title, items }) => (
-                        <FooterWidget key={id} title={title} items={items} />
-                    ))}
-                </Box>
-            </Container>
-            <Container>
-                <Box sx={styles.footerInner}>
-                    <Box sx={styles.copyright}>
-                        <Logo />
-                        <Text as="span">
-                            Copyright by {new Date().getFullYear()} RedQ, Inc
-                        </Text>
-                    </Box>
-
-                    <Box as="ul" sx={styles.footerNav}>
-                        {footerNav.map(({ path, label }, i) => (
-                            <li key={i}>
-                                <Link
-                                    path={path}
-                                    key={i}
-                                    label={label}
-                                    variant="footer"
-                                />
-                            </li>
-                        ))}
-                    </Box>
-                </Box>
-            </Container>
+  return (
+    <footer sx={styles.footer}>
+      <Container>
+        <Box sx={styles.footer.footerBottomArea}>
+          <Box sx={styles.footer.logo}>
+            <Link path="/">
+              <Image src={FooterLogo} alt="Logo" />
+            </Link>
+          </Box>
+          <Box sx={styles.footer.menus}>
+            <nav>
+              {data.menuItem.map(({ path, label }, i) => (
+                <Link
+                  path={path}
+                  key={i}
+                  label={label}
+                  sx={styles.footer.link}
+                />
+              ))}
+            </nav>
+          </Box>
+          <Text sx={styles.footer.copyright}>
+            Copyright by {new Date().getFullYear()} PT. Greenfield Environment
+            Solution
+          </Text>
         </Box>
-    );
+      </Container>
+    </footer>
+  );
 }
 
 const styles = {
-    footerTopInner: {
-        gap: [50, null, null, null, 17, 50],
-        mb: [50],
-        display: ["grid"],
-        gridTemplateColumns: [
-            "repeat(2, 1fr)",
-            null,
-            null,
-            "repeat(3, 1fr)",
-            "repeat(5, 1fr)",
-        ],
+  footer: {
+    footerBottomArea: {
+      display: "flex",
+      pt: [7, null, 7],
+      pb: ["40px", null, 7],
+      textAlign: "center",
+      flexDirection: "column",
     },
-    footerInner: {
-        borderTop: `1px solid #D9E0E7`,
-        display: ["block", null, "flex"],
+    logo: {
+      mx: "auto",
+    },
+    menus: {
+      mt: [3, 4],
+      mb: 2,
+      nav: {
+        display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
-        padding: "35px 0 40px",
-        "@media only screen and (max-width: 400px)": {
-            pb: 10,
-        },
+        justifyContent: "center",
+        flexWrap: "wrap",
+      },
+    },
+
+    link: {
+      fontSize: [1, "15px"],
+      color: "text",
+      fontWeight: "400",
+      mb: 2,
+      cursor: "pointer",
+      transition: "all 0.35s",
+      display: "block",
+      textDecoration: "none",
+      lineHeight: [1.5, null, 1.8],
+      px: [2, null, 4],
+      ":hover": {
+        color: "primary",
+      },
     },
     copyright: {
-        display: ["flex"],
-        alignItems: "center",
-        flexDirection: ["column", null, null, null, "row"],
-        span: {
-            fontSize: "14px",
-            lineHeight: 1.29,
-            color: rgba("#0F2137", 0.6),
-            mt: ["18px", "18px", "7px"],
-        },
+      fontSize: [1, "15px"],
+      width: "100%",
     },
-    footerNav: {
-        listStyle: "none",
-        margin: ["15px 0 0", "15px 0 0", "0"],
-        padding: 0,
-        display: ["flex"],
-        flexWrap: ["wrap", null, null, "unset"],
-        justifyContent: ["center", null, "flex-start"],
-        "li + li": {
-            ml: ["18px", "18px", "20px"],
-            "@media only screen and (max-width: 400px)": {
-                mb: "10px",
-            },
-        },
-        a: {
-            color: "textSecondary",
-        },
-    },
+  },
 };

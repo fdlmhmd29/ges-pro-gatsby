@@ -8,7 +8,7 @@ import Sticky from "react-stickynode";
 
 // Components
 import Logo from "../logo";
-import { NavLink } from "../link";
+import { NavLink } from "../link";  
 import menuItems from "./header.data";
 
 export default function Header() {
