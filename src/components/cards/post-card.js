@@ -18,7 +18,7 @@ export default function PostCard({
 
             <Flex sx={styles.postContent}>
                 <Heading sx={styles.title}>
-                    <Link href={`/post/${postLink}`} variant="blog">
+                    <Link href={postLink} variant="blog">
                         {title}
                     </Link>
                 </Heading>

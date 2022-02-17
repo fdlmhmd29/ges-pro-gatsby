@@ -1,11 +1,12 @@
-fragment Category on Category {
+fragment Seo on Seo {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  name
-  slug
+  title
+  description
+  keywords
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -27,10 +28,11 @@ fragment Category on Category {
       stage
     }
   }
-  post {
-    ... on Post {
+  image {
+    ... on Asset {
       remoteTypeName: __typename
       remoteId: id
+      locale
       stage
     }
   }

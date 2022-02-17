@@ -4,7 +4,34 @@ fragment Page on Page {
   createdAt
   updatedAt
   publishedAt
-  content
+  title
+  slug
+  content {
+    ... on PageContentRichText {
+      raw
+      json
+      html
+      markdown
+      text
+      references {
+        ... on Author {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+        ... on Category {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+        ... on Page {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+      }
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -23,6 +50,21 @@ fragment Page on Page {
     ... on User {
       remoteTypeName: __typename
       remoteId: id
+      stage
+    }
+  }
+  seo {
+    ... on Seo {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  attachment {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
       stage
     }
   }

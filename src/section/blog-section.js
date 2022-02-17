@@ -37,16 +37,18 @@ const responsive = {
 function BlogSection() {
     const { posts } = useStaticQuery(graphql`
         {
-            posts: allGraphCmsPost {
+            posts: allGraphCmsPost(sort: { fields: date, order: DESC }) {
                 nodes {
+                    id
                     author {
                         name
                     }
-                    createdAt
-                    featuredImage {
-                        url
+                    date
+                    seo {
+                        image {
+                            url
+                        }
                     }
-                    id
                     slug
                     title
                 }
@@ -88,12 +90,12 @@ function BlogSection() {
                         {posts.nodes.map(post => (
                             <PostCard
                                 key={post.id}
-                                src={post.featuredImage.url}
+                                src={post.seo.image.url}
                                 alt={post.title}
-                                postLink={post.slug}
+                                postLink={`/posts/${post.slug}`}
                                 title={post.title}
                                 authorName={post.author.name}
-                                date={post.createdAt}
+                                date={post.date}
                             />
                         ))}
                     </Carousel>
