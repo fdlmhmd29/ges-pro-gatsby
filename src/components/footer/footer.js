@@ -1,8 +1,14 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Text } from "theme-ui";
 import { Link } from "../link";
-import data from "./footer.data";
 import FooterLogo from "../../images/logo.png";
+
+const menuItem = {
+  href: "google.com",
+  label:
+    "Gedung Hastacentra Lantai 2, Jl. Raya Tanjung Barat No. 07, Pasar Minggu, Jakarta 12510",
+};
+
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
@@ -15,14 +21,11 @@ export default function Footer() {
           </Box>
           <Box sx={styles.footer.menus}>
             <nav>
-              {data.menuItem.map(({ path, label }, i) => (
-                <Link
-                  path={path}
-                  key={i}
-                  label={label}
-                  sx={styles.footer.link}
-                />
-              ))}
+              <Link
+                path={menuItem.path}
+                label={menuItem.label}
+                sx={styles.footer.link}
+              />
             </nav>
           </Box>
           <Text sx={styles.footer.copyright}>
