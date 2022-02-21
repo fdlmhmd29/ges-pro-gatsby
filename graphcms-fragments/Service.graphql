@@ -1,30 +1,12 @@
-fragment ServicePost on ServicePost {
+fragment Service on Service {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
   title
-  shortTitle
+  description
   slug
-  excerpt
-  content {
-    ... on ServicePostContentRichText {
-      raw
-      json
-      html
-      markdown
-      text
-      references {
-        ... on Team {
-          remoteTypeName: __typename
-          remoteId: id
-          stage
-        }
-      }
-    }
-  }
-  postDate
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -43,21 +25,6 @@ fragment ServicePost on ServicePost {
     ... on User {
       remoteTypeName: __typename
       remoteId: id
-      stage
-    }
-  }
-  author {
-    ... on Author {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
-  featuredImage {
-    ... on Asset {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
       stage
     }
   }

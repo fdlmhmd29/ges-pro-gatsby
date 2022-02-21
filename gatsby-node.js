@@ -4,7 +4,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const { data } = await graphql(
     `
       {
-        posts: allGraphCmsPost(sort: { fields: date, order: ASC }) {
+        posts: allGraphCmsPost {
           edges {
             nextPost: next {
               slug
@@ -12,13 +12,18 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             }
             page: node {
               id
+              attachments {
+                url
+              }
               author {
-                id
-                name
+                designation
+                fullName
                 photo {
                   url
                 }
-                designation
+              }
+              categories {
+                name
               }
               content {
                 markdownNode {
@@ -27,25 +32,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                   }
                 }
               }
-              date
-              excerpt
-              seo {
-                description
-                image {
-                  url
-                }
-                keywords
-                title
+              createdAt
+              image {
+                url
               }
               slug
               title
-              attachment {
-                url
-              }
-              category {
-                name
-              }
-              updatedAt
             }
             previousPost: previous {
               slug

@@ -9,11 +9,11 @@ const Service = ({ service }) => {
           width="64"
           height="64"
           src={service.icon.url}
-          alt={service.shortTitle}
+          alt={service.title}
         />
       </Box>
-      <Heading as="h4">{service.shortTitle}</Heading>
-      <Text as="p">{service.excerpt}</Text>
+      <Heading as="h4">{service.title}</Heading>
+      <Text as="p">{service.description}</Text>
     </Box>
   );
 };

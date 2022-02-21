@@ -6,8 +6,6 @@ fragment Post on Post {
   publishedAt
   title
   slug
-  date
-  excerpt
   content {
     ... on RichText {
       raw
@@ -37,21 +35,7 @@ fragment Post on Post {
       stage
     }
   }
-  author {
-    ... on Author {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
-  seo {
-    ... on Seo {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
-  attachment {
+  image {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id
@@ -59,10 +43,25 @@ fragment Post on Post {
       stage
     }
   }
-  category {
+  categories {
     ... on Category {
       remoteTypeName: __typename
       remoteId: id
+      stage
+    }
+  }
+  author {
+    ... on Author {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  attachments {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
       stage
     }
   }

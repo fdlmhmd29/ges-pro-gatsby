@@ -32,29 +32,15 @@ fragment Asset on Asset {
       stage
     }
   }
-  photoTeam {
-    ... on Team {
+  attachmentsPost {
+    ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  featureImageFeature {
-    ... on Feature {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
-  featuredImageServicePost {
-    ... on ServicePost {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
-  iconServicePost {
-    ... on ServicePost {
+  imagePost {
+    ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage
@@ -67,22 +53,22 @@ fragment Asset on Asset {
       stage
     }
   }
-  imageSeo {
-    ... on Seo {
+  iconFeature {
+    ... on Feature {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  attachmentPage {
-    ... on Page {
+  iconService {
+    ... on Service {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  attachmentPost {
-    ... on Post {
+  photoTeam {
+    ... on Team {
       remoteTypeName: __typename
       remoteId: id
       stage

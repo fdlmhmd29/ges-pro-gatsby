@@ -4,8 +4,8 @@ fragment Feature on Feature {
   createdAt
   updatedAt
   publishedAt
-  featureTitle
-  featureText
+  title
+  description
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -27,7 +27,7 @@ fragment Feature on Feature {
       stage
     }
   }
-  featureImage {
+  icon {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id

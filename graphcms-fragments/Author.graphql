@@ -4,8 +4,7 @@ fragment Author on Author {
   createdAt
   updatedAt
   publishedAt
-  name
-  bio
+  fullName
   designation
   createdBy {
     ... on User {
@@ -33,13 +32,6 @@ fragment Author on Author {
       remoteTypeName: __typename
       remoteId: id
       locale
-      stage
-    }
-  }
-  servicePost {
-    ... on ServicePost {
-      remoteTypeName: __typename
-      remoteId: id
       stage
     }
   }

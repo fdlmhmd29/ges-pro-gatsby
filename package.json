@@ -60,7 +60,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "preload": "gatsby-preload-fonts",

@@ -9,9 +9,9 @@ function Features() {
       features: allGraphCmsFeature {
         nodes {
           id
-          featureText
-          featureTitle
-          featureImage {
+          description
+          title
+          icon {
             url
           }
         }
@@ -33,13 +33,13 @@ function Features() {
                 <Image
                   width="70"
                   height="70"
-                  src={feature.featureImage.url}
-                  alt={feature.featureTitle}
+                  src={feature.icon.url}
+                  alt={feature.title}
                 />
               </Box>
               <Box sx={styles.postContent}>
-                <Heading as="h3">{feature.featureTitle}</Heading>
-                <Text as="p">{feature.featureText}</Text>
+                <Heading as="h3">{feature.title}</Heading>
+                <Text as="p">{feature.description}</Text>
               </Box>
             </Box>
           ))}

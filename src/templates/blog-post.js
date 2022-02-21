@@ -23,11 +23,11 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
     <LayoutBlog>
       <Box id="blog-wrapper" sx={styles.sectionWrapper}>
         <Flex sx={styles.sectionInfo}>
-          <Text>{page.category.name}</Text>
+          <Text>{page.categories.name}</Text>
           <BsDot />
           <Box>
-            <time dateTime={page.updatedAt}>
-              {moment(page.updatedAt).format("D MMMM, YYYY")}
+            <time dateTime={page.createdAt}>
+              {moment(page.createdAt).format("D MMMM, YYYY")}
             </time>
           </Box>
         </Flex>
@@ -39,10 +39,12 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
             <Avatar
               sx={styles.authorAvatar}
               src={page.author.photo.url}
-              alt={page.author.name}
+              alt={page.author.fullName}
             />
             <Flex sx={styles.authorDetails}>
-              <Paragraph sx={styles.authorName}>{page.author.name}</Paragraph>
+              <Paragraph sx={styles.authorName}>
+                {page.author.fullName}
+              </Paragraph>
               <Paragraph sx={styles.authorDesignation}>
                 {page.author.designation}
               </Paragraph>
@@ -51,10 +53,10 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
         </Heading>
         <div>
           <Box sx={styles.contentWrapper}>
-            <Image sx={styles.contentImage} src={page.seo.image.url} />
+            <Image sx={styles.contentImage} src={page.image.url} />
             <Box sx={styles.contentImageDescription}>
               <dt>
-                Keterangan gambar: <dd>{page.seo.description}</dd>
+                Keterangan gambar: <dd>{page.description ?? null}</dd>
               </dt>
             </Box>
             <Paragraph sx={styles.content}>
@@ -63,7 +65,7 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
               </MDXRenderer>
             </Paragraph>
             <Flex sx={styles.downloadButton}>
-              <a href={page.attachment.url}>
+              <a href={page.attachments.url}>
                 <Button className="rounded-full">
                   <BsDownload size={20} />
                 </Button>

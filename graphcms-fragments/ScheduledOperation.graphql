@@ -58,32 +58,17 @@ fragment ScheduledOperation on ScheduledOperation {
       remoteId: id
       stage
     }
-    ... on Page {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
     ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
-    ... on Seo {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-    ... on ServicePost {
+    ... on Service {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
     ... on Team {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-    ... on TeamSocialMedia {
       remoteTypeName: __typename
       remoteId: id
       stage

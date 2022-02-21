@@ -12,105 +12,104 @@ import ButtonGroup from "../components/button-group";
 import { graphql, useStaticQuery } from "gatsby";
 
 const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1310 },
-        items: 3,
-        slidesToSlide: 3, // optional, default to 1.
-    },
-    laptop: {
-        breakpoint: { max: 1310, min: 992 },
-        items: 3,
-        slidesToSlide: 3, // optional, default to 1.
-    },
-    tablet: {
-        breakpoint: { max: 992, min: 640 },
-        items: 2,
-        slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-        breakpoint: { max: 639, min: 0 },
-        items: 1,
-        slidesToSlide: 1, // optional, default to 1.
-    },
+  desktop: {
+    breakpoint: { max: 3000, min: 1310 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  laptop: {
+    breakpoint: { max: 1310, min: 992 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 992, min: 640 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 639, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
 };
 
 function BlogSection() {
-    const { posts } = useStaticQuery(graphql`
-        {
-            posts: allGraphCmsPost(sort: { fields: date, order: DESC }) {
-                nodes {
-                    id
-                    author {
-                        name
-                    }
-                    date
-                    seo {
-                        image {
-                            url
-                        }
-                    }
-                    slug
-                    title
-                }
-            }
+  const { posts } = useStaticQuery(graphql`
+    {
+      posts: allGraphCmsPost(sort: { fields: createdAt, order: ASC }) {
+        nodes {
+          id
+          author {
+            fullName
+            designation
+          }
+          title
+          image {
+            url
+          }
+          createdAt
+          slug
         }
-    `);
+      }
+    }
+  `);
 
-    return (
-        <section sx={{ variant: "section.news" }}>
-            <Container>
-                <SectionHeading
-                    title="Blog kami"
-                    description="Dapatkan tulisan terbaru dari author berbakat kami"
-                />
+  return (
+    <section sx={{ variant: "section.news" }}>
+      <Container>
+        <SectionHeading
+          title="Blog kami"
+          description="Dapatkan tulisan terbaru dari author berbakat kami"
+        />
 
-                <Box sx={styles.carouselWrapper}>
-                    <Carousel
-                        additionalTransfrom={0}
-                        arrows={false}
-                        autoPlaySpeed={3000}
-                        centerMode={false}
-                        className=""
-                        containerClass="carousel-container"
-                        customButtonGroup={<ButtonGroup />}
-                        dotListClass="test"
-                        draggable={true}
-                        focusOnSelect={false}
-                        infinite={true}
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={80}
-                        renderButtonGroupOutside
-                        renderDotsOutside={false}
-                        responsive={responsive}
-                        showDots={false}
-                        sliderClass=""
-                        slidesToSlide={1}
-                    >
-                        {posts.nodes.map(post => (
-                            <PostCard
-                                key={post.id}
-                                src={post.seo.image.url}
-                                alt={post.title}
-                                postLink={`/posts/${post.slug}`}
-                                title={post.title}
-                                authorName={post.author.name}
-                                date={post.date}
-                            />
-                        ))}
-                    </Carousel>
-                </Box>
-            </Container>
-        </section>
-    );
+        <Box sx={styles.carouselWrapper}>
+          <Carousel
+            additionalTransfrom={0}
+            arrows={false}
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="carousel-container"
+            customButtonGroup={<ButtonGroup />}
+            dotListClass="test"
+            draggable={true}
+            focusOnSelect={false}
+            infinite={true}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside
+            renderDotsOutside={false}
+            responsive={responsive}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+          >
+            {posts.nodes.map(post => (
+              <PostCard
+                key={post.id}
+                src={post.image.url}
+                alt={post.title}
+                postLink={`/posts/${post.slug}`}
+                title={post.title}
+                authorName={post.author.fullName}
+                date={post.createdAt}
+              />
+            ))}
+          </Carousel>
+        </Box>
+      </Container>
+    </section>
+  );
 }
 
 export default BlogSection;
 
 const styles = {
-    carouselWrapper: {
-        ".carousel-container": {
-            mx: -3,
-        },
+  carouselWrapper: {
+    ".carousel-container": {
+      mx: -3,
     },
+  },
 };
