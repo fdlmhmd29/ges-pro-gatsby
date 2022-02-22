@@ -13,13 +13,12 @@ import {
 import { keyframes } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 import { IoIosPlay } from "react-icons/io";
-import { IoCloseOutline } from "react-icons/io5";
-import { BiLoaderAlt } from "react-icons/bi";
+
+import { ModalVideo } from "react-modal-video";
 
 import TextFeature from "../components/text-feature";
 import Smart from "../images/sections/profile/smart.svg";
 import Secure from "../images/sections/profile/secure.svg";
-import "../styles/reactPlayer.css";
 
 const data = {
   subTitle: "Profil Perusahaan",
@@ -43,20 +42,11 @@ const data = {
 };
 
 export default function Profile() {
-  const [modal, setModal] = useState(false);
-  const [videoLoading, setVideoLoading] = useState(true);
-
-  const openModal = () => {
-    setModal(!modal);
-  };
-
-  const spinner = () => {
-    setVideoLoading(!videoLoading);
-  };
-
+  // modal popup video handler
+  const [videoOpen, setVideoOpen] = useState(false);
   const handleClick = e => {
     e.preventDefault();
-    setModal(!modal);
+    setVideoOpen(true);
   };
 
   return (
@@ -69,7 +59,7 @@ export default function Profile() {
           />
           <Button
             sx={styles.videoBtn}
-            onClick={openModal}
+            onClick={handleClick}
             aria-label="Play Button"
           >
             <span>
@@ -96,43 +86,12 @@ export default function Profile() {
       </Container>
 
       {/* Video Player */}
-      <div className="App">
-        {modal ? (
-          <section className="modal__bg">
-            <div className="modal__align">
-              <div className="modal__content" modal={modal}>
-                <IoCloseOutline
-                  className="modal__close"
-                  arial-label="Close modal"
-                  onClick={handleClick}
-                />
-                <div className="modal__video-align">
-                  {videoLoading ? (
-                    <div className="modal__spinner">
-                      <BiLoaderAlt
-                        className="modal__spinner-style"
-                        fadeIn="none"
-                      />
-                    </div>
-                  ) : null}
-                  <iframe
-                    className="modal__video-style"
-                    onLoad={spinner}
-                    loading="lazy"
-                    width="800"
-                    height="500"
-                    src="https://www.youtube.com/embed/5K-jSaZmlGI"
-                    title="Company Profile PT Greenfield Environment Solution 2022"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </section>
-        ) : null}
-      </div>
+      <ModalVideo
+        channel="youtube"
+        isOpen={videoOpen}
+        videoId="5K-jSaZmlGI"
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }

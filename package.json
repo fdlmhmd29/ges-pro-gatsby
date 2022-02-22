@@ -36,6 +36,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
+    "react-modal": "^3.14.4",
     "react-modal-video": "^1.2.8",
     "react-multi-carousel": "^2.6.5",
     "react-on-screen": "^2.1.1",
@@ -64,7 +65,6 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "preload": "gatsby-preload-fonts",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

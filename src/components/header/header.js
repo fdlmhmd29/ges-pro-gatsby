@@ -1,10 +1,9 @@
 /** @jsx jsx */
-
-import { jsx } from "theme-ui";
-import { Box, Container, MenuButton, Flex, Button } from "theme-ui";
+import { jsx, Box, Container, MenuButton, Flex, Button } from "theme-ui";
 import { useState } from "react";
 import { GrClose } from "react-icons/gr";
 import Sticky from "react-stickynode";
+import { keyframes } from "@emotion/react";
 
 // Components
 import Logo from "../logo";
@@ -23,11 +22,10 @@ export default function Header() {
   };
 
   return (
-    // Box
     <Box sx={styles.headerWrapper}>
       <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={100}>
         <Box
-          as={"header"}
+          as="header"
           variant="layout.header"
           className={mobileMenu ? "is-mobile-menu" : ""}
         >
@@ -79,9 +77,28 @@ export default function Header() {
   );
 }
 
+const positionAnim = keyframes`
+  from {
+    position: fixed;
+    opacity: 1;
+  }
+
+  to {
+    position: absolute;
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+`;
+
 const styles = {
   headerWrapper: {
+    fontWeight: "body",
+    py: 4,
+    width: "100%",
+    position: "absolute",
     backgroundColor: "transparent",
+    transition: "all 0.1s ease-in-out 0s",
+    animation: `${positionAnim} 0.4s ease`,
     ".is-sticky": {
       header: {
         "::before": {
