@@ -1,18 +1,18 @@
 const menuItems = [
   {
-    path: "home",
+    path: "beranda",
     label: "Beranda",
   },
   {
-    path: "ultimate-feature",
+    path: "jasa",
     label: "Jasa",
   },
   {
-    path: "pricing",
+    path: "profil",
     label: "Profil",
   },
   {
-    path: "faq",
+    path: "blog",
     label: "Blog",
   },
 ];
