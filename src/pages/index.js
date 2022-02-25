@@ -13,7 +13,7 @@ import BlogSection from "../section/blog-section";
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Beranda" />
     <Banner />
     <Features />
     <Services />

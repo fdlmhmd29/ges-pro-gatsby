@@ -14,7 +14,7 @@ import { keyframes } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 import { IoIosPlay } from "react-icons/io";
 
-import { ModalVideo } from "react-modal-video";
+import ModalVideo from "react-modal-video";
 
 import TextFeature from "../components/text-feature";
 import Smart from "../images/sections/profile/smart.svg";
