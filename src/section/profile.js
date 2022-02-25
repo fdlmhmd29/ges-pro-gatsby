@@ -14,7 +14,8 @@ import { keyframes } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 import { IoIosPlay } from "react-icons/io";
 
-import ModalVideo from "react-modal-video";
+import Modal, { CloseButton } from "../components/modal/modal";
+import ResponsiveIframe from "../components/modal/responsive-iframe";
 
 import TextFeature from "../components/text-feature";
 import Smart from "../images/sections/profile/smart.svg";
@@ -42,12 +43,7 @@ const data = {
 };
 
 export default function Profile() {
-  // modal popup video handler
-  const [videoOpen, setVideoOpen] = useState(false);
-  const handleClick = e => {
-    e.preventDefault();
-    setVideoOpen(true);
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section sx={styles.profile}>
@@ -59,7 +55,7 @@ export default function Profile() {
           />
           <Button
             sx={styles.videoBtn}
-            onClick={handleClick}
+            onClick={() => setIsOpen(true)}
             aria-label="Play Button"
           >
             <span>
@@ -86,12 +82,19 @@ export default function Profile() {
       </Container>
 
       {/* Video Player */}
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="5K-jSaZmlGI"
-        onClose={() => setVideoOpen(false)}
-      />
+      <Modal isOpen={isOpen}>
+        <CloseButton
+          onClick={() => setIsOpen(false)}
+          size="24px"
+          color="#fff"
+        />
+        <ResponsiveIframe
+          src="https://www.youtube.com/embed/Z_ZhOhIV_xY"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          title="Intro Video"
+        />
+      </Modal>
     </section>
   );
 }
