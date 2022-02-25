@@ -6,7 +6,6 @@ import Banner from "../section/banner";
 import Features from "../section/features";
 import Services from "../section/services";
 import Profile from "../section/profile";
-import "react-modal-video/css/modal-video.min.css";
 import "react-multi-carousel/lib/styles.css";
 import TeamSection from "../section/team-section";
 import BlogSection from "../section/blog-section";
