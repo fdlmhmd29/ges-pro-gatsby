@@ -64,24 +64,19 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
             </Paragraph>
             <Flex sx={styles.downloadButton}>
               <a href={page.attachments.url}>
-                <Button className="rounded-full">
+                <Button>
                   <BsDownload size={20} />
                 </Button>
               </a>
             </Flex>
           </Box>
-          <Box
-            sx={styles.footer}
-            className="text-sm font-medium leading-5 divide-y divide-gray-200 lg:col-start-1 lg:row-start-2"
-          >
+          <Box sx={styles.footer}>
             {(nextPost || previousPost) && (
-              <div className="space-y-8 py-8">
+              <div>
                 {nextPost && (
                   <div>
-                    <h2 className="text-xs tracking-wide uppercase text-gray-500">
-                      Selanjutnya
-                    </h2>
-                    <div className="text-purple-500 hover:text-purple-600">
+                    <h2>Selanjutnya</h2>
+                    <div>
                       <Link href={`/posts/${nextPost.slug}`}>
                         {nextPost.title}
                       </Link>
@@ -90,10 +85,8 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
                 )}
                 {previousPost && (
                   <div>
-                    <h2 className="text-xs tracking-wide uppercase text-gray-500">
-                      Sebelumnya
-                    </h2>
-                    <div className="text-purple-500 hover:text-purple-600">
+                    <h2>Sebelumnya</h2>
+                    <div>
                       <Link href={`/posts/${previousPost.slug}`}>
                         {previousPost.title}
                       </Link>
@@ -102,10 +95,8 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
                 )}
               </div>
             )}
-            <div className="pt-8">
-              <Link href="/" className="text-purple-500 hover:text-purple-600">
-                &larr; Kembali ke halaman utama
-              </Link>
+            <div>
+              <Link href="/">&larr; Kembali ke halaman utama</Link>
             </div>
           </Box>
         </div>
