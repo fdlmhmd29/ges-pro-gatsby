@@ -365,10 +365,29 @@ const theme = {
       borderBottom: "1px solid",
       borderColor: "#D9E0E7",
     },
-    // also you can use other HTML elements style here
-    ul: {
-      listStyle: "none",
+
+    // Ordered List
+    ol: {
+      listStyleType: "decimal",
+      listStylePosition: "outside",
+      listStyleImage: "none",
+      m: 0,
+      p: 0,
     },
+
+    // List Items (li) styles
+    li: {
+      textAlign: "left",
+      ml: ["2rem", "3rem"],
+      pl: "1rem",
+      pb: ["0.7rem", "1rem"],
+    },
+
+    p: {
+      pb: ["1.2rem", "2rem"],
+      fontSize: ["1rem", 3],
+    },
+
     srOnly: {
       border: "0 !important",
       clip: "rect(1px, 1px, 1px, 1px) !important",

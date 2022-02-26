@@ -6,7 +6,6 @@ import {
   Heading,
   Image,
   Paragraph,
-  Text,
   Flex,
   Button,
   Link,
@@ -14,17 +13,16 @@ import {
 
 import { rgb } from "polished";
 import moment from "moment";
-import { BsDot } from "react-icons/bs";
 import { BsDownload } from "react-icons/bs";
 import LayoutBlog from "../components/layout-blog";
+import { Seo } from "../components";
 
 function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
   return (
     <LayoutBlog>
+      <Seo title={page.title} description={page.description} />
       <Box id="blog-wrapper" sx={styles.sectionWrapper}>
         <Flex sx={styles.sectionInfo}>
-          <Text>{page.categories.name}</Text>
-          <BsDot />
           <Box>
             <time dateTime={page.createdAt}>
               {moment(page.createdAt).format("D MMMM, YYYY")}
@@ -120,7 +118,7 @@ const styles = {
   sectionWrapper: {
     overflow: "hidden",
     pt: "5rem",
-    px: "0.5rem",
+    mx: ["0.6rem", "8rem"],
   },
   sectionInfo: {
     justifyContent: "start",
@@ -187,7 +185,7 @@ const styles = {
   content: {
     fontSize: ["1.1rem", "1.2rem"],
     lineHeight: ["2rem", "2.3rem"],
-    textAlign: "justify",
+    textAlign: "left",
     textJustify: "none",
     my: 2,
   },

@@ -14,6 +14,8 @@ fragment Post on Post {
       text
     }
   }
+  attachmentTitle
+  description
   createdBy {
     ... on User {
       remoteTypeName: __typename
