@@ -12,7 +12,7 @@ function BlogPostTemplate({ pageContext: { page } }) {
   return (
     <LayoutBlog>
       <Seo title={page.title} description={page.description} />
-      <Box id="blog-wrapper" variant="blog" sx={styles.sectionWrapper}>
+      <Box id="blog-wrapper" sx={styles.sectionWrapper}>
         <Flex sx={styles.sectionInfo}>
           <Box>
             <time dateTime={page.createdAt}>
@@ -40,14 +40,9 @@ function BlogPostTemplate({ pageContext: { page } }) {
             </Flex>
           </Flex>
         </Heading>
-        <Box as={"div"} sx={styles.isi}>
+        <Box as={"div"}>
           <Box sx={styles.contentWrapper}>
             <Image sx={styles.contentImage} src={page.image.url} />
-            <Box sx={styles.contentImageDescription}>
-              <dt>
-                Keterangan gambar: <dd>{page.description ?? null}</dd>
-              </dt>
-            </Box>
             <Paragraph sx={styles.content}>
               <MDXRenderer>
                 {page.content.markdownNode.childMdx.body}
@@ -71,7 +66,7 @@ const styles = {
   sectionWrapper: {
     overflow: "hidden",
     pt: "5rem",
-    mx: ["1.5rem", "20rem"],
+    mx: ["1.5rem", "27em"],
   },
   sectionInfo: {
     justifyContent: "start",
@@ -124,24 +119,10 @@ const styles = {
     mb: [4],
     borderRadius: "0.5rem",
   },
-  contentImageDescription: {
-    borderRadius: "0.5rem",
-    p: [2, 3, 3, 3, 4],
-    fontSize: ["0.7rem", "0.8rem"],
-    backgroundColor: "#fafafa",
-    fontWeight: 200,
-    color: rgb(97, 97, 97),
-    mb: [4],
-  },
   content: {
     lineHeight: ["2rem", "2.3rem"],
     textAlign: "left",
     textJustify: "none",
-  },
-  isi: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
   downloadButton: {
     justifyContent: "flex-start",

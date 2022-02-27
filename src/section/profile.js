@@ -18,8 +18,8 @@ import Modal, { CloseButton } from "../components/modal/modal";
 import ResponsiveIframe from "../components/modal/responsive-iframe";
 
 import TextFeature from "../components/text-feature";
-import Smart from "../images/sections/profile/smart.svg";
-import Secure from "../images/sections/profile/secure.svg";
+import vision from "../images/sections/profile/vision.svg";
+import mission from "../images/sections/profile/mission.svg";
 
 const data = {
   subTitle: "Profil Perusahaan",
@@ -27,14 +27,14 @@ const data = {
   features: [
     {
       id: 1,
-      imgSrc: Smart,
+      imgSrc: vision,
       altText: "Visi",
       title: "Visi",
       text: "Menawarkan jasa konsultansi lingkungan kepada perusahaan yang membutuhkan jasa penyusunan berbagai jenis dokumen lingkungan yang berkualitas, implementatif dan adaptif dengan regulasi.",
     },
     {
       id: 2,
-      imgSrc: Secure,
+      imgSrc: mission,
       altText: "Misi",
       title: "Misi",
       text: "Menjadi perusahaan jasa konsultansi lingkungan yang terpercaya, berintegritas tinggi, berorientasi kepada kepuasan dan kebutuhan klien dalam mewujudkan  pembangunan berwawasan lingkungan.",
@@ -46,7 +46,7 @@ export default function Profile() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section sx={styles.profile}>
+    <section id="profil" sx={styles.profile}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <StaticImage

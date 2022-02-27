@@ -4,6 +4,7 @@ fragment Post on Post {
   createdAt
   updatedAt
   publishedAt
+  description
   title
   slug
   content {
@@ -15,7 +16,6 @@ fragment Post on Post {
     }
   }
   attachmentTitle
-  description
   createdBy {
     ... on User {
       remoteTypeName: __typename

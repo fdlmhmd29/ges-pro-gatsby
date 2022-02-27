@@ -54,7 +54,7 @@ export default function Header() {
                   ))}
                 </Box>
                 <Button variant="primaryMd" sx={styles.explore}>
-                  Explore Now
+                  Hubungi Kami
                 </Button>
               </Flex>
 

@@ -88,7 +88,7 @@ const Banner = () => {
   };
 
   return (
-    <Box id="home" as="section">
+    <Box id="beranda" as="section">
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.content}>

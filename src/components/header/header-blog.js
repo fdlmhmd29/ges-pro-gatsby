@@ -86,7 +86,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    mx: "auto",
+    mx: [null, "14.5rem"],
     "@media only screen and (max-width: 768px)": {
       ".navbar": {
         position: "absolute",
