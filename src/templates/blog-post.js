@@ -17,11 +17,11 @@ import { BsDownload } from "react-icons/bs";
 import LayoutBlog from "../components/layout-blog";
 import { Seo } from "../components";
 
-function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
+function BlogPostTemplate({ pageContext: { page } }) {
   return (
     <LayoutBlog>
       <Seo title={page.title} description={page.description} />
-      <Box id="blog-wrapper" sx={styles.sectionWrapper}>
+      <Box id="blog-wrapper" variant="blog" sx={styles.sectionWrapper}>
         <Flex sx={styles.sectionInfo}>
           <Box>
             <time dateTime={page.createdAt}>
@@ -49,7 +49,7 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
             </Flex>
           </Flex>
         </Heading>
-        <div>
+        <Box as={"div"} sx={styles.isi}>
           <Box sx={styles.contentWrapper}>
             <Image sx={styles.contentImage} src={page.image.url} />
             <Box sx={styles.contentImageDescription}>
@@ -70,36 +70,7 @@ function BlogPostTemplate({ pageContext: { nextPost, page, previousPost } }) {
               </a>
             </Flex>
           </Box>
-          <Box sx={styles.footer}>
-            {(nextPost || previousPost) && (
-              <div>
-                {nextPost && (
-                  <div>
-                    <h2>Selanjutnya</h2>
-                    <div>
-                      <Link href={`/posts/${nextPost.slug}`}>
-                        {nextPost.title}
-                      </Link>
-                    </div>
-                  </div>
-                )}
-                {previousPost && (
-                  <div>
-                    <h2>Sebelumnya</h2>
-                    <div>
-                      <Link href={`/posts/${previousPost.slug}`}>
-                        {previousPost.title}
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-            <div>
-              <Link href="/">&larr; Kembali ke halaman utama</Link>
-            </div>
-          </Box>
-        </div>
+        </Box>
       </Box>
     </LayoutBlog>
   );
@@ -109,18 +80,16 @@ const styles = {
   sectionWrapper: {
     overflow: "hidden",
     pt: "5rem",
-    mx: ["0.6rem", "8rem"],
+    mx: ["1.5rem", "20rem"],
   },
   sectionInfo: {
     justifyContent: "start",
     fontSize: [1, 1, 1, 1, 2],
     lineHeight: "1.5rem",
-    fontWeight: "bold",
     flexDirection: "row",
     gap: "1rem",
     alignItems: "center",
   },
-  header: {},
   title: {
     fontSize: ["1.3em", "2em"],
     lineHeight: ["2.5rem", "3.3rem"],
@@ -148,7 +117,7 @@ const styles = {
   },
   authorName: {
     fontSize: [1, 1, 1, 1, 2],
-    fontWeight: 700,
+    // fontWeight: 700,
     color: rgb(17, 24, 39),
   },
   authorDesignation: {
@@ -174,21 +143,17 @@ const styles = {
     mb: [4],
   },
   content: {
-    fontSize: ["1.1rem", "1.2rem"],
     lineHeight: ["2rem", "2.3rem"],
     textAlign: "left",
     textJustify: "none",
-    my: 2,
+  },
+  isi: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   downloadButton: {
     justifyContent: "flex-start",
-  },
-  footer: {
-    fontSize: ["0.875rem"],
-    lineHeight: "1.5rem",
-    fontWeight: "bold",
-    borderTop: "0px solid #eaeaea",
-    borderBottom: "1px solid rgb(229, 231, 235);",
   },
 };
 

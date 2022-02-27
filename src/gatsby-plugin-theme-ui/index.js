@@ -16,10 +16,9 @@ const theme = {
     link: "#4F96FF", // default link color
   },
   fonts: {
-    body: "IBM Plex Sans",
-    // body:
-    //   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: "IBM Plex Sans",
+    body: "Montserrat",
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: "Montserrat",
     // heading: 'Bree Serif',
     monospace: "IBM Plex Mono, monospace",
   },
@@ -53,6 +52,7 @@ const theme = {
     "1367px",
     "1440px",
   ],
+
   // variants can use custom, user-defined names
   layout: {
     container: {
@@ -371,6 +371,7 @@ const theme = {
       listStyleType: "decimal",
       listStylePosition: "outside",
       listStyleImage: "none",
+      fontSize: [2, 3],
       m: 0,
       p: 0,
     },
@@ -379,12 +380,11 @@ const theme = {
     li: {
       textAlign: "left",
       ml: ["2rem", "3rem"],
-      pl: "1rem",
       pb: ["0.7rem", "1rem"],
     },
 
     p: {
-      pb: ["1.2rem", "2rem"],
+      pb: "0.5rem",
       fontSize: ["1rem", 3],
     },
 

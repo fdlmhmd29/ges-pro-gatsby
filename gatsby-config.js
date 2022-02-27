@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `PT Greenfield Environment Solution Company Profile and Blog`,
+    title: `PT Greenfield Environment Solution`,
     description: `Situs Profil Perusahaan PT Greenfield Environment Solution Company yang bergerak di bidang pengembangan dan pengelolaan lingkungan.`,
     author: `@fdlmhmd29`,
     siteUrl: `https://ges-consultant.co.id`,
@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: process.env.GA_TRACK_ID,
+        trackingId: "UA-219512633-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional
@@ -67,7 +67,8 @@ module.exports = {
     {
       resolve: "gatsby-source-graphcms",
       options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        endpoint:
+          "https://api-ap-southeast-2.graphcms.com/v2/ckzh70un00b9001xsafp82tt8/master",
         token: process.env.GRAPHCMS_TOKEN,
         buildMarkdownNodes: true,
       },
@@ -75,7 +76,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`IBM Plex Sans\:400, 400i, 500, 600, 700, 700i`],
+        fonts: [
+          `IBM Plex Sans\:400, 400i, 500, 600, 700, 700i`,
+          `Montserrat\:400, 400i, 500, 600, 700, 800, 900`,
+        ],
         display: "swap",
       },
     },
