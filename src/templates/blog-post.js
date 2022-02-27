@@ -1,15 +1,6 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import {
-  Avatar,
-  Box,
-  Heading,
-  Image,
-  Paragraph,
-  Flex,
-  Button,
-  Link,
-} from "theme-ui";
+import { Avatar, Box, Heading, Image, Paragraph, Flex, Button } from "theme-ui";
 
 import { rgb } from "polished";
 import moment from "moment";

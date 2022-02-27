@@ -50,7 +50,7 @@ export default function Profile() {
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <StaticImage
-            src="../images/sections/profile/service-thumb.png"
+            src="../images/sections/profile/service-thumb.webp"
             alt="Visi dan Misi PT. Greenfield Environment Solution"
           />
           <Button
