@@ -27,6 +27,7 @@ const TopBar = () => {
 						<a
 							href="https://goo.gl/maps/WRi3jGvkzCaXXveG7"
 							target={"_blank"}
+							rel={"noopener noreferrer"}
 						>
 							Arahan Google Maps
 						</a>

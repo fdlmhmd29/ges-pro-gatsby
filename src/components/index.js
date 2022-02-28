@@ -7,7 +7,6 @@ export { default as Layout } from "./layout";
 export { default as Logo } from "./logo";
 export { default as SectionHeading } from "./section-header";
 export { default as Seo } from "./seo";
-export { default as Contact } from "./contact";
 export { default as Topbar } from "./topbar";
 
 // Section
@@ -18,3 +17,4 @@ export { default as Services } from "../section/services";
 export { default as TeamSection } from "../section/team-section";
 export { default as BlogSection } from "../section/blog-section";
 export { default as Profile } from "../section/profile";
+export { default as Sertificate } from "../section/Sertificate";

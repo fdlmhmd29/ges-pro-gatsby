@@ -10,6 +10,7 @@ import {
 	TeamSection,
 	BlogSection,
 	Profile,
+	Sertificate,
 } from "../components";
 
 import "react-multi-carousel/lib/styles.css";
@@ -22,6 +23,7 @@ const IndexPage = () => (
 		<Services />
 		<Profile />
 		<TeamSection />
+		<Sertificate />
 		<Clients />
 		<BlogSection />
 	</Layout>
