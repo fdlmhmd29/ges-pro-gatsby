@@ -59,7 +59,7 @@ function BlogSection() {
     <section id="blog" sx={{ variant: "section.news" }}>
       <Container>
         <SectionHeading
-          title="Blog kami"
+          title="Blog"
           description="Dapatkan tulisan terbaru dari author berbakat kami"
         />
 

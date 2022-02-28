@@ -7,3 +7,13 @@ export { default as Layout } from "./layout";
 export { default as Logo } from "./logo";
 export { default as SectionHeading } from "./section-header";
 export { default as Seo } from "./seo";
+export { default as Contact } from "./contact";
+
+// Section
+export { default as Clients } from "../section/clients";
+export { default as Banner } from "../section/banner";
+export { default as Features } from "../section/features";
+export { default as Services } from "../section/services";
+export { default as TeamSection } from "../section/team-section";
+export { default as BlogSection } from "../section/blog-section";
+export { default as Profile } from "../section/profile";
