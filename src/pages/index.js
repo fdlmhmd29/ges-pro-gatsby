@@ -18,11 +18,11 @@ const IndexPage = () => (
 	<Layout>
 		<Seo title="Beranda" />
 		<Banner />
-		<Clients />
 		<Features />
 		<Services />
 		<Profile />
 		<TeamSection />
+		<Clients />
 		<BlogSection />
 	</Layout>
 );
