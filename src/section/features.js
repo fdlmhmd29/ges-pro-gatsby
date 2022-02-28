@@ -24,7 +24,7 @@ function Features() {
       <Container sx={styles.container}>
         <SectionHeading
           title={"Melayani jasa penyusunan dokumen lingkungan"}
-          description={"Diberbagai sektor kegiatan"}
+          slogan={"Diberbagai sektor kegiatan"}
         />
         <Flex sx={styles.flex}>
           {features.nodes.map(feature => (

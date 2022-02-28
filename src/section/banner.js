@@ -18,7 +18,6 @@ import "swiper/css";
 import slider1 from "../images/sections/banner/1.webp";
 import slider2 from "../images/sections/banner/2.webp";
 import slider3 from "../images/sections/banner/3.webp";
-import { kai, bridgestone, gagnikel } from "../images";
 
 // Components
 import Progressbar from "../components/progressbar";
@@ -97,16 +96,12 @@ const Banner = () => {
             <Text as="p" sx={styles.text}>
               Memberikan pelayanan profesional terbaik dengan metode yang tepat,
               efisien dan efektif dari berbagai aspek adalah pondasi utama
-              perusahaan.
+              perusahaan
             </Text>
+
             <Button variant="primary" sx={styles.button}>
               Hubungi Kami
             </Button>
-            <Box sx={styles.clients}>
-              <Img src={kai} alt="PT. Kereta Api Indonesia" />
-              <Img src={bridgestone} alt="PT. Bridgestone Tire Indonesia" />
-              <Img src={gagnikel} alt="PT. GAG Nikel" />
-            </Box>
           </Box>
           <Box sx={styles.rightContent}>
             <Progressbar

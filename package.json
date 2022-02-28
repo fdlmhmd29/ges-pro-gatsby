@@ -37,6 +37,7 @@
     "react-multi-carousel": "^2.6.5",
     "react-on-screen": "^2.1.1",
     "react-scroll": "^1.8.4",
+    "react-slick": "^0.28.1",
     "react-stickynode": "^4.0.0",
     "swiper": "^8.0.5",
     "theme-ui": "^0.13.1"

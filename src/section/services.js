@@ -25,8 +25,8 @@ function Services() {
     <Box as="section" id="jasa" sx={styles.section}>
       <Container>
         <SectionHeading
-          title="Jasa layanan kami"
-          description="Mencakup berbagaimacam kebutuhan"
+          slogan="Jasa layanan kami"
+          title="Mencakup berbagai macam kebutuhan"
         />
         <Grid sx={styles.serviceGrid}>
           {services.nodes.map(service => (
