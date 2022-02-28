@@ -60,7 +60,7 @@ const styles = {
     padding: ["15px 20px", "25px 30px"],
   },
   title: {
-    fontSize: [3, null, null, null, null, 4],
+    fontSize: [3, null, null, null, null, 3],
     color: "heading",
     lineHeight: [1.4, 1.5],
     fontWeight: 700,

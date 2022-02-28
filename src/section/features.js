@@ -23,8 +23,8 @@ function Features() {
     <Box as="section" id="features" sx={styles.section}>
       <Container sx={styles.container}>
         <SectionHeading
-          title={"Melayani semua kebutuhan bisnis"}
-          description={"Solusi ideal untuk bisnis Anda"}
+          title={"Melayani jasa penyusunan dokumen lingkungan"}
+          description={"Diberbagai sektor kegiatan"}
         />
         <Flex sx={styles.flex}>
           {features.nodes.map(feature => (

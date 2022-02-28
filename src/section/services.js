@@ -1,39 +1,9 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Grid } from "theme-ui";
-import TrackVisibility from "react-on-screen";
 import { graphql, useStaticQuery } from "gatsby";
 
 // Components
-import { SectionHeading, Service, StatItem } from "../components";
-
-const data = {
-  stats: [
-    {
-      id: 1,
-      value: 254,
-      suffix: "",
-      title: "Successful Project",
-    },
-    {
-      id: 2,
-      value: 3783,
-      suffix: "",
-      title: "People Impacted",
-    },
-    {
-      id: 3,
-      value: 8,
-      suffix: "M",
-      title: "Money Donated",
-    },
-    {
-      id: 4,
-      value: 60,
-      suffix: "+",
-      title: "Volunteer Involved",
-    },
-  ],
-};
+import { SectionHeading, Service } from "../components";
 
 function Services() {
   const { services } = useStaticQuery(graphql`
@@ -61,13 +31,6 @@ function Services() {
         <Grid sx={styles.serviceGrid}>
           {services.nodes.map(service => (
             <Service key={service.id} service={service} />
-          ))}
-        </Grid>
-        <Grid sx={styles.statsGrid}>
-          {data.stats.map(stat => (
-            <TrackVisibility key={stat.id} once>
-              <StatItem stat={stat} />
-            </TrackVisibility>
           ))}
         </Grid>
       </Container>
