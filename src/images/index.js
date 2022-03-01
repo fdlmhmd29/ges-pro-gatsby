@@ -4,6 +4,8 @@ import LogoWhite from "../images/logo-white.png";
 
 // Banner
 import slider1 from "../images/sections/banner/1.svg";
+import slider2 from "../images/sections/banner/2.svg";
+import slider3 from "../images/sections/banner/3.webp";
 
 // Clients
 import bridgestone from "./sections/banner/bridgestone.webp";
@@ -39,4 +41,6 @@ export {
 	pupr,
 	hyundai,
 	slider1,
+	slider2,
+	slider3,
 };

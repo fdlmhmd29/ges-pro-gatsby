@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Container, Grid, Image, Heading, Text } from "theme-ui";
+import { jsx, Box, Container, Grid, Image, Text } from "theme-ui";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 import sertificate from "../images/sections/sertificate.svg";

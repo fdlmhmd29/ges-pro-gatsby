@@ -44,7 +44,7 @@ const styles = {
 	topbar: {
 		backgroundColor: "#f5b314",
 		px: [0, null, null, null, 0],
-		py: ["1rem", "0.7rem"],
+		py: ["0.8rem", "0.6rem"],
 	},
 	gmaps: {
 		mt: ["1rem", 0],
@@ -71,13 +71,11 @@ const styles = {
 			backgroundColor: "rgba(255, 255, 255, 0.1)",
 			borderRadius: "5px",
 			color: "white",
-			fontSize: ["13px"],
 			fontWeight: 500,
 			justifyContent: "center",
-			lineHeight: "1.5",
-			padding: "0.5rem",
+			lineHeight: "1",
+			padding: "0.3rem",
 			textAlign: "center",
-			width: "auto",
 			width: ["aut0", null, null, "auto"],
 			overflow: ["hidden", null, null, "unset"],
 			whiteSpace: ["nowrap", null, null, "unset"],
@@ -99,7 +97,7 @@ const styles = {
 		a: {
 			color: "#fff",
 			cursor: "pointer",
-			fontSize: ["13px"],
+			fontSize: ["12px"],
 			alignItems: "center",
 			display: "inline-flex",
 			textDecoration: "none",

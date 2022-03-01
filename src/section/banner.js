@@ -16,9 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // Images
-import { slider1 } from "../images";
-import slider2 from "../images/sections/banner/2.webp";
-import slider3 from "../images/sections/banner/3.webp";
+import { slider1, slider2, slider3 } from "../images";
 
 // Components
 import Progressbar from "../components/progressbar";
@@ -34,8 +32,8 @@ const data = {
 		{
 			id: 2,
 			image: slider2,
-			title: "Implementasi UKL-UPL",
-			desc: "PT. Ajinomoto Bakery, Indonesia",
+			title: "Konsultasi Publik",
+			desc: "Studi AMDAL, Sunter Agung",
 		},
 		{
 			id: 3,
@@ -182,7 +180,7 @@ const styles = {
 	},
 	text: {
 		fontSize: ["14px", "14px", "14px", "16px", "16px", "18px"],
-		lineHeight: [1.85, 1.85, 1.85, 1.85, 1.85, 2.33],
+		lineHeight: [1.85, 1.85, 1.85, 1.85, 1.85, 2],
 		color: "textSecondary",
 		mt: ["14px", "19px"],
 	},
