@@ -6,6 +6,7 @@ import LogoWhite from "../images/logo-white.png";
 import slider1 from "../images/sections/banner/1.svg";
 import slider2 from "../images/sections/banner/2.svg";
 import slider3 from "../images/sections/banner/3.webp";
+import slider4 from "../images/sections/banner/4.svg";
 
 // Clients
 import bridgestone from "./sections/banner/bridgestone.webp";
@@ -43,4 +44,5 @@ export {
 	slider1,
 	slider2,
 	slider3,
+	slider4,
 };

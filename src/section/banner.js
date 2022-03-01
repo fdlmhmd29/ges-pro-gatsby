@@ -16,7 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // Images
-import { slider1, slider2, slider3 } from "../images";
+import { slider1, slider2, slider3, slider4 } from "../images";
 
 // Components
 import Progressbar from "../components/progressbar";
@@ -40,6 +40,12 @@ const data = {
 			image: slider3,
 			title: "Implementasi UKL-UPL",
 			desc: "PT. Ajinomoto Bakery, Indonesia",
+		},
+		{
+			id: 4,
+			image: slider4,
+			title: "Pembangunan IPAL",
+			desc: "De Heus Indonesia",
 		},
 	],
 };

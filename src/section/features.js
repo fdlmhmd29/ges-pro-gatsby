@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Flex, Heading, Text, Image } from "theme-ui";
+import { Box, Container, Flex, Heading, Image } from "theme-ui";
 import { graphql, useStaticQuery } from "gatsby";
 import SectionHeading from "../components/section-header";
 
@@ -9,7 +9,6 @@ function Features() {
 			features: allGraphCmsFeature {
 				nodes {
 					id
-					description
 					title
 					icon {
 						url
@@ -39,7 +38,6 @@ function Features() {
 							</Box>
 							<Box sx={styles.postContent}>
 								<Heading as="h3">{feature.title}</Heading>
-								<Text as="p">{feature.description}</Text>
 							</Box>
 						</Box>
 					))}
@@ -86,7 +84,8 @@ const styles = {
 	flex: {
 		display: "flex",
 		flexWrap: "wrap",
-		justifyContent: "space-between",
+
+		justifyContent: "center",
 	},
 	sectionTitle: {
 		textAlign: "center",
@@ -110,9 +109,10 @@ const styles = {
 		mx: ["0", null, null, null, null, "15px"],
 		display: "flex",
 		flex: ["0 0 100%", null, null, "0 0 calc(33.333% - 30px)"],
-		flexDirection: ["column", null, null, null, "row"],
-		justifyContent: ["center", null, "flex-start"],
-		textAlign: ["center", null, null, "left"],
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		textAlign: "center",
 		">.image": {
 			flexShrink: 0,
 			width: "70px",
@@ -121,11 +121,10 @@ const styles = {
 		},
 	},
 	postContent: {
-		ml: ["0", null, null, null, "30px"],
-		mt: ["20px", null, null, null, "0"],
+		mt: ["1rem", "2rem"],
 		h3: {
 			fontSize: "18px",
-			fontWeight: 700,
+			fontWeight: 500,
 			lineHeight: 1,
 			color: "#0F2137",
 			mb: "15px",
