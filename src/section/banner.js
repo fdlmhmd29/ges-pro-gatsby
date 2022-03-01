@@ -16,7 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // Images
-import slider1 from "../images/sections/banner/1.webp";
+import { slider1 } from "../images";
 import slider2 from "../images/sections/banner/2.webp";
 import slider3 from "../images/sections/banner/3.webp";
 
@@ -28,8 +28,8 @@ const data = {
 		{
 			id: 1,
 			image: slider1,
-			title: "Instalasi Air Limbah",
-			desc: "De Heus, Kota Bekasi",
+			title: "Studi AMDAL",
+			desc: "Mahakam Ulu, Kaltim",
 		},
 		{
 			id: 2,

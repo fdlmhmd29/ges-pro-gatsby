@@ -15,58 +15,82 @@ import {
 	asianpaints,
 	akr,
 	tol,
+	bayer,
+	pupr,
+	adp,
+	hyundai,
 } from "../images";
 
 const clients = [
 	{
 		id: 1,
-		name: "De Heus Indonesia (PT. Universal Agri Bisnisindo)",
-		logo: deheus,
+		name: "PT. Hyundai Motor Indonesia Logo",
+		logo: hyundai,
 	},
 	{
 		id: 2,
-		name: "PT. Kereta Api Indonesia",
+		name: "PT. Kereta Api Indonesia Logo",
 		logo: kai,
 	},
 	{
 		id: 3,
-		name: "PT. Ajinomoto Indonesia",
+		name: "PT. Ajinomoto Indonesia Logo",
 		logo: ajinomoto,
 	},
 	{
 		id: 4,
-		name: "PT. Bridgestone Tire Indonesia",
+		name: "PT. Bridgestone Tire Indonesia Logo",
 		logo: bridgestone,
 	},
 	{
 		id: 5,
-		name: "PT. BASF Care Chemical Indonesia ",
-		logo: basf,
+		name: "Kementerian Pekerjaan Umum dan Perumahan Rakyat Logo",
+		logo: pupr,
 	},
 	{
 		id: 6,
-		name: "PT Suryacipta Swadaya",
+		name: "PT Suryacipta Swadaya Logo",
 		logo: suryacipta,
 	},
 	{
 		id: 7,
-		name: "PT Asian Paints Color Indonesia",
+		name: "PT Asian Paints Color Indonesia Logo",
 		logo: asianpaints,
 	},
 	{
 		id: 8,
-		name: "PT. Gag Nikel",
+		name: "PT. Gag Nikel Logo",
 		logo: gagnikel,
 	},
 	{
 		id: 9,
-		name: "PT. AKR Corporindo Tbk",
+		name: "PT. AKR Corporindo Tbk Logo",
 		logo: akr,
 	},
 	{
 		id: 10,
-		name: "PT. Citra Karya Jabar Tol",
+		name: "PT. Citra Karya Jabar Tol Logo",
 		logo: tol,
+	},
+	{
+		id: 11,
+		name: "Bayer AG Logo",
+		logo: bayer,
+	},
+	{
+		id: 12,
+		name: "PT. BASF Care Chemical Indonesia Logo",
+		logo: basf,
+	},
+	{
+		id: 13,
+		name: "Adhi Persada Properti Logo",
+		logo: adp,
+	},
+	{
+		id: 14,
+		name: "De Heus Indonesia (PT. Universal Agri Bisnisindo) Logo",
+		logo: deheus,
 	},
 ];
 
@@ -164,7 +188,7 @@ const styles = {
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "space-around",
-		pt: [0, 0, 25, 25, 25, 6],
+		pt: [0, 0, 25, 25, 25, 5],
 		"&.slick-slider": {
 			marginBottom: "40px",
 		},
@@ -201,7 +225,7 @@ const styles = {
 		"&.slick-disabled": {
 			color: "#BBC7D7",
 			svg: {
-				transform: "scale(0.8)",
+				transform: "scale(0.7)",
 			},
 		},
 		"&.slick-prev": {

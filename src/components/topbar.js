@@ -8,7 +8,7 @@ const TopBar = () => {
 	return (
 		<Box as="section" sx={styles.topbar}>
 			<Container sx={styles.content}>
-				<Box as={"div"} className="caption">
+				<Box as={"div"}>
 					<Text as="span" className="caption">
 						<MdEmail size={18} />{" "}
 						<a href="mailto:pt.greenfield@gmail.com">
@@ -21,7 +21,7 @@ const TopBar = () => {
 						<a href="tel:(021)-7815225">(021)-7815225</a>
 					</Text>
 				</Box>
-				<Box as={"div"}>
+				<Box as={"div"} sx={styles.gmaps}>
 					<Text as="span" className="caption">
 						<SiGooglemaps size={18} />{" "}
 						<a
@@ -44,7 +44,10 @@ const styles = {
 	topbar: {
 		backgroundColor: "#f5b314",
 		px: [0, null, null, null, 0],
-		py: 2,
+		py: ["1rem", "0.7rem"],
+	},
+	gmaps: {
+		mt: ["1rem", 0],
 	},
 	content: {
 		display: "flex",
@@ -65,10 +68,26 @@ const styles = {
 		".caption": {
 			display: "inline-flex",
 			alignItems: "center",
-
+			backgroundColor: "rgba(255, 255, 255, 0.1)",
+			borderRadius: "5px",
+			color: "white",
+			fontSize: ["13px"],
+			fontWeight: 500,
+			justifyContent: "center",
+			lineHeight: "1.5",
+			padding: "0.5rem",
+			textAlign: "center",
+			width: "auto",
 			width: ["aut0", null, null, "auto"],
 			overflow: ["hidden", null, null, "unset"],
 			whiteSpace: ["nowrap", null, null, "unset"],
+			textOverflow: ["ellipsis", null, null, "unset"],
+
+			transition: "all 0.3s ease-in-out",
+
+			"&:hover": {
+				backgroundColor: "rgba(255, 255, 255, 0.2)",
+			},
 
 			svg: {
 				mr: [2, null, null, 3],
