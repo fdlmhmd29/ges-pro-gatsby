@@ -177,6 +177,10 @@ const styles = {
 			fontWeight: 400,
 			padding: 0,
 			margin: "0 20px",
+
+			"&:hover": {
+				textDecoration: "underline",
+			},
 		},
 		".active": {
 			color: "primary",

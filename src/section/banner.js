@@ -38,7 +38,7 @@ const data = {
 		{
 			id: 3,
 			image: slider3,
-			title: "Implementasi UKL-UPL",
+			title: "Laporan Monitoring UKL-UPL",
 			desc: "PT. Ajinomoto Bakery, Indonesia",
 		},
 		{
