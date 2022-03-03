@@ -8,6 +8,7 @@ export { default as Logo } from "./logo";
 export { default as SectionHeading } from "./section-header";
 export { default as Seo } from "./seo";
 export { default as Topbar } from "./topbar";
+export { default as BottomBar } from "../components/footer/bottom-bar";
 
 // Section
 export { default as Clients } from "../section/clients";
