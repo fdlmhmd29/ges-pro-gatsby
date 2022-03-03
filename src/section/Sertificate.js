@@ -58,7 +58,7 @@ export default Sertificate;
 
 const styles = {
 	section: {
-		py: ["4rem", 7, 7, 7, 7, 7, 8],
+		py: ["1rem", 7, 7, 7, 7, 7, 5],
 	},
 	grid: {
 		gap: [null, null, null, null, "0 10px"],

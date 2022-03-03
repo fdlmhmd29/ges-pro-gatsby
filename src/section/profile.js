@@ -122,7 +122,7 @@ const playPluse = keyframes`
 const styles = {
 	section: {
 		pt: ["4rem", 7, 7, 7, 7, 7, 8],
-		pb: [null, 7, 7, 7, 7, 7, 8],
+		pb: [null, 7, 7, 7, 7, 7, "4rem"],
 	},
 	coreFeature: {
 		py: [0, null, null, 2, null, 7],

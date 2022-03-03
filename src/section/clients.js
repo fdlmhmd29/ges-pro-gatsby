@@ -181,8 +181,8 @@ export default Clients;
 
 const styles = {
 	section: {
-		pt: 2,
-		pb: 8,
+		pt: 0,
+		pb: ["4rem", 8],
 	},
 	clients: {
 		display: "flex",
