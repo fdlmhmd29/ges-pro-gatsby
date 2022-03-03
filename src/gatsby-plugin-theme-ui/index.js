@@ -23,17 +23,13 @@ const theme = {
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
 	fontWeights: {
-		body: "normal",
-		// body: 400,
-		heading: 500,
-		// heading: 700,
+		body: 400,
+		heading: 700,
 		bold: 700,
 	},
 	lineHeights: {
 		body: 1.5,
-		// body: 1.5,
 		heading: 1.25,
-		// heading: 1.125,
 	},
 	letterSpacings: {
 		body: "normal",
@@ -51,6 +47,14 @@ const theme = {
 		"1367px",
 		"1440px",
 	],
+
+	section: {
+		news: {
+			backgroundColor: "backgroundSecondary",
+			pt: [7, 7, 7, 7, 8],
+			pb: [7, 7, 7, 7, 8],
+		},
+	},
 
 	// variants can use custom, user-defined names
 	layout: {
@@ -87,66 +91,18 @@ const theme = {
 		toolbar: {
 			display: "flex",
 			alignItems: "center",
-			// justifyContent: 'space-between',
 		},
-		main: {},
+
 		footer: {
 			backgroundColor: "#F9FAFC",
 			pt: 6,
-		},
-	},
-	section: {
-		news: {
-			backgroundColor: "backgroundSecondary",
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 8],
-		},
-		services: {
-			pb: ["90px", null, 9, null, null, 10, null, "150px"],
-		},
-		ultimateFeature: {
-			pt: [0, 7, 7, 8, 8, 7, 7],
-			pb: [7, 7, 7, 8, 9, 130, 150],
-		},
-		features: {
-			backgroundColor: "backgroundSecondary",
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 8],
-		},
-		introVideo: {
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 8],
-		},
-		usefulFeatures: {
-			backgroundColor: "backgroundSecondary",
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 150],
-		},
-		widgets: {
-			backgroundColor: "#FFF7F5",
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 6, 8],
-		},
-		pricing: {
-			pt: [7, 7, 7, 7, 8],
-			pb: [6, 6, 6, 8],
-		},
-		faq: {
-			pt: [6, 6, 6, 8],
-			pb: [7, 7, 7, 7, 150],
 		},
 	},
 	text: {
 		heading: {
 			fontFamily: "heading",
 			lineHeight: "heading",
-			fontWeight: "heading",
-		},
-		heroTitle: {
-			fontSize: [4, null, null, 5, null, 5, 6],
-			fontWeight: 700,
-			letterSpacing: "heading",
-			lineHeight: [1.4, null, null, null, null, null, 1.57],
+			fontWeight: "bold",
 		},
 	},
 	links: {
@@ -177,17 +133,6 @@ const theme = {
 		nav: {
 			display: ["none", null, "inline-flex"],
 			p: 2,
-			// transitionProperty: 'background-color',
-			// transitionTimingFunction: 'ease-out',
-			// transitionDuration: '.2s',
-			// borderRadius: 2,
-			// '&:hover': {
-			//   bg: 'highlight',
-			// },
-			// '&.active': {
-			//   color: 'primary',
-			//   bg: 'highlight',
-			// },
 		},
 		footer: {
 			display: "flex",
