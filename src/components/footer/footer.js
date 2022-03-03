@@ -90,7 +90,7 @@ const styles = {
 		"& .map": {
 			width: "100%",
 			height: "100%",
-			pr: ["250px", "250px", "250px", "250px", "1rem", "1rem", "357px"],
+			pr: "1rem",
 			borderRadius: "12px",
 			border: "0px",
 		},
@@ -103,7 +103,7 @@ const styles = {
 		alignItems: "start",
 		width: "100%",
 		height: "100%",
-		pl: ["250px", "250px", "250px", "250px", "1rem", "1rem", "357px"],
+		pl: "1rem",
 	},
 
 	aboutTitle: {
