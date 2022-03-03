@@ -41,32 +41,38 @@ export default function Footer() {
 					<Paragraph as={"h4"} sx={styles.aboutTitle}>
 						Temukan Kami
 					</Paragraph>
-					<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
-						<SiGooglemaps /> Alamat:
-					</Paragraph>
-					<Text as={"p"} sx={styles.description}>
-						Gedung Hastacentra Lantai 2, Jalan Raya Tanjung Barat,
-						No. 07, Pasar Minggu, Jakarta 12510
-					</Text>
+					<Box as={"div"} sx={styles.addressWrapper}>
+						<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
+							<SiGooglemaps /> Alamat:
+						</Paragraph>
+						<Text as={"p"} sx={styles.description}>
+							Gedung Hastacentra Lantai 2, Jalan Raya Tanjung
+							Barat, No. 07, Pasar Minggu, Jakarta 12510
+						</Text>
+					</Box>
 
-					<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
-						<FaPhoneAlt /> Telepon:
-					</Paragraph>
-					<Text as={"p"} sx={styles.description}>
-						(021)-7815225
-					</Text>
+					<Box as={"div"} sx={styles.addressWrapper}>
+						<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
+							<FaPhoneAlt /> Telepon:
+						</Paragraph>
+						<Text as={"p"} sx={styles.description}>
+							(021)-7815225
+						</Text>
+					</Box>
 
-					<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
-						<MdEmail /> Email:
-					</Paragraph>
-					<Text as={"p"} sx={styles.description}>
-						<Link
-							sx={styles.a}
-							href="mailto:pt.greenfield@gmail.com"
-						>
-							pt.greenfield@gmail.com
-						</Link>
-					</Text>
+					<Box as={"div"} sx={styles.addressWrapper}>
+						<Paragraph as={"h5"} sx={styles.aboutSubtitle}>
+							<MdEmail /> Email:
+						</Paragraph>
+						<Text as={"p"} sx={styles.description}>
+							<Link
+								sx={styles.a}
+								href="mailto:pt.greenfield@gmail.com"
+							>
+								pt.greenfield@gmail.com
+							</Link>
+						</Text>
+					</Box>
 				</Box>
 			</Box>
 		</Container>
@@ -89,7 +95,7 @@ const styles = {
 
 		"& .map": {
 			width: ["100%", "400px"],
-			height: ["250px", "424px"],
+			height: ["250px", "357px"],
 			borderRadius: "12px",
 			border: "0px",
 		},
@@ -103,13 +109,12 @@ const styles = {
 	aboutText: {
 		fontSize: "0.875rem",
 		color: "text",
-		my: "1rem",
+
 		maxWidth: "80ch",
 	},
 	aboutSubtitle: {
 		fontSize: "1",
 		fontWeight: "bold",
-
 		color: "text",
 		my: "1rem",
 		maxWidth: "80ch",
@@ -118,6 +123,7 @@ const styles = {
 		fontSize: "0.875rem",
 		color: "text",
 		my: "1rem",
+		ml: "0.5rem",
 		maxWidth: "80ch",
 	},
 	a: {
@@ -128,5 +134,9 @@ const styles = {
 		"&:hover": {
 			textDecoration: "underline",
 		},
+	},
+	addressWrapper: {
+		display: "flex",
+		flexDirection: "row",
 	},
 };
