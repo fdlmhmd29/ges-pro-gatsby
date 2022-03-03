@@ -50,7 +50,7 @@ export default TeamSection;
 
 const styles = {
 	section: {
-		py: ["4rem", 7, 7, 7, 7, 7, 8],
+		py: ["4rem", 7, 7, 7, 7, 7, 0],
 	},
 	grid: {
 		mt: [0, null, -6, null, -4],
