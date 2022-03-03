@@ -77,14 +77,13 @@ const styles = {
 	section: {
 		overflow: "hidden",
 		backgroundColor: "white",
-		pt: [6, null, null, 8, 10, null, 6],
-		pb: [6, null, null, null, 10, null, 6],
+		pt: [6, null, null, 8, "6rem", null, 6],
+		pb: [6, null, null, null, "4rem", null, 6],
 	},
 	container: {},
 	flex: {
 		display: "flex",
 		flexWrap: "wrap",
-
 		justifyContent: "center",
 	},
 	sectionTitle: {

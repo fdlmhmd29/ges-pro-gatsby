@@ -43,14 +43,13 @@ export default Services;
 const styles = {
 	section: {
 		backgroundColor: "#e2ffda",
-		pt: [6, null, null, 8, 10, null, 6],
-		pb: [6, null, null, null, 10, null, 6],
+		py: [6, null, null, 8, "4rem", null, 6],
 	},
 	serviceGrid: {
 		backgroundColor: "white",
 		boxShadow: "0px 0px 25px rgba(54, 91, 125, 0.04)",
 		borderRadius: 10,
-		gap: [8, null, null, "60px 40px", "50px 30px", "60px 40px"],
+		gap: ["3rem", null, null, "60px 40px", "50px 30px", "60px 40px"],
 		justifyContent: "center",
 		gridTemplateColumns: [
 			"repeat(1, 250px)",

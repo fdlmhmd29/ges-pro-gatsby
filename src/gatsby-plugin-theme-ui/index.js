@@ -51,8 +51,7 @@ const theme = {
 	section: {
 		news: {
 			backgroundColor: "backgroundSecondary",
-			pt: [7, 7, 7, 7, 8],
-			pb: [7, 7, 7, 7, 8],
+			py: ["3rem", 7, 7, 7, "4rem", "4rem", "4rem"],
 		},
 	},
 
@@ -123,13 +122,7 @@ const theme = {
 		logo: {
 			display: "inline-flex",
 		},
-		learnMore: {
-			display: "inline-flex",
-			alignItems: "center",
-			textDecoration: "none",
-			fontWeight: 700,
-			color: "primary",
-		},
+
 		nav: {
 			display: ["none", null, "inline-flex"],
 			p: 2,

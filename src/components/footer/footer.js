@@ -132,7 +132,7 @@ const styles = {
 		fontSize: ["1rem", "0.875rem"],
 		overflow: "hidden",
 		textOverflow: "ellipsis",
-		maxWidth: ["28ch", "42ch"],
+		maxWidth: ["28ch", "42ch", "42ch", "42ch", "42ch", "42ch", "57ch"],
 		whiteSpace: "nowrap",
 		color: "text",
 	},

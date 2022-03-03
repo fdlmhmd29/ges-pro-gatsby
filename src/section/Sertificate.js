@@ -58,7 +58,7 @@ export default Sertificate;
 
 const styles = {
 	section: {
-		pt: "0",
+		py: ["4rem", 7, 7, 7, 7, 7, 8],
 	},
 	grid: {
 		gap: [null, null, null, null, "0 10px"],
@@ -128,7 +128,7 @@ const styles = {
 			null,
 			"repeat(2, 200px)",
 		],
-		justifyContent: ["null", null, null, "center", "unset"],
+		justifyContent: ["center", null, null, "center", "unset"],
 		listStyle: "none",
 		mt: [4, null, null, 5, 4, 5],
 		p: 0,
