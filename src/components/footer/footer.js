@@ -42,17 +42,28 @@ export default function Footer() {
 						Temukan Kami
 					</Paragraph>
 					<Box as={"div"} sx={styles.addressWrapper}>
-						<SiGooglemaps size={"24"} />
+						<SiGooglemaps />
 						<Text as={"p"} sx={styles.description}>
-							Gedung Hastacentra Lantai 2, Jalan Raya Tanjung
-							Barat, No. 07, Pasar Minggu, Jakarta 12510
+							<Link
+								sx={styles.a}
+								href="https://goo.gl/maps/EZGsGAa4EGbmtoUVA"
+								target={"_blank"}
+							>
+								Gedung Hastacentra Lantai 2, Jalan Raya Tanjung
+								Barat, No. 07, Pasar Minggu, Jakarta 12510
+							</Link>
 						</Text>
 					</Box>
 
 					<Box as={"div"} sx={styles.addressWrapper}>
 						<FaPhoneAlt />
 						<Text as={"p"} sx={styles.description}>
-							(021)-7815225
+							<Link
+								sx={styles.a}
+								href="tel:pt.greenfield@gmail.com"
+							>
+								(021)-7815225
+							</Link>
 						</Text>
 					</Box>
 
@@ -90,7 +101,6 @@ const styles = {
 		"& .map": {
 			width: "100%",
 			height: "100%",
-			pr: "1rem",
 			borderRadius: "12px",
 			border: "0px",
 		},
@@ -98,29 +108,32 @@ const styles = {
 
 	aboutWrapper: {
 		display: "flex",
-		flexDirection: ["row", "column"],
+		flexDirection: "column",
 		justifyContent: "space-between",
 		alignItems: "start",
 		width: "100%",
 		height: "100%",
-		pl: "1rem",
+		pl: [null, "1rem"],
 	},
 
 	aboutTitle: {
-		fontSize: "1rem",
+		fontSize: ["1.125rem", "1rem"],
 		fontWeight: "bold",
 		color: "text",
 		my: "1rem",
 	},
 	aboutText: {
-		fontSize: "0.875rem",
+		fontSize: ["1rem", "0.875rem"],
 		color: "text",
-
 		maxWidth: "80ch",
 	},
 	description: {
 		ml: "1em",
-		fontSize: "0.875rem",
+		fontSize: ["1rem", "0.875rem"],
+		overflow: "hidden",
+		textOverflow: "ellipsis",
+		maxWidth: ["28ch", "42ch"],
+		whiteSpace: "nowrap",
 		color: "text",
 	},
 	a: {
@@ -135,7 +148,6 @@ const styles = {
 	addressWrapper: {
 		display: "flex",
 		alignItems: "center",
-
 		flexDirection: "row",
 		mt: "0.5rem",
 	},
