@@ -99,7 +99,7 @@ const styles = {
 		mb: ["2rem", 0],
 
 		"& .map": {
-			width: "100%",
+			width: "95%",
 			height: "100%",
 			borderRadius: "12px",
 			border: "0px",
