@@ -22,7 +22,7 @@ function Services() {
 	`);
 
 	return (
-		<Box as="section" id="services" sx={styles.section}>
+		<Box as="section" id="jasa" sx={styles.section}>
 			<Container>
 				<SectionHeading
 					slogan="Jasa layanan kami"
