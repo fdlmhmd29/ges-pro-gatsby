@@ -11,7 +11,11 @@ const CallToAction = () => {
 						dokumen lingkungan?
 					</Heading>
 					<Box sx={styles.btnWrapper}>
-						<Button sx={styles.btn}>HUBUNGI KAMI</Button>
+						<Button sx={styles.btn}>
+							<a href="mailto:pt.greenfield@gmail.com">
+								HUBUNGI KAMI
+							</a>
+						</Button>
 					</Box>
 				</Box>
 			</Container>
@@ -57,7 +61,7 @@ const styles = {
 		color: "primary",
 		borderRadius: "5px",
 		fontSize: [0, 1, null, null, null, null, "17px"],
-		fontWeight: "700",
+
 		letterSpacing: "0.1em",
 		fontFamily: "body",
 		padding: ["10px 24px", null, null, null, null, "15px 44px"],
@@ -82,8 +86,14 @@ const styles = {
 			transform: "translateX(-50%) rotate(180deg)",
 		},
 		"&:hover": {
-			backgroundColor: "black",
+			backgroundColor: "#f5b314",
 			color: "#fff",
+		},
+		a: {
+			color: "text",
+			cursor: "pointer",
+			textDecoration: "none",
+			fontWeight: "700",
 		},
 	},
 };

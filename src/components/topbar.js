@@ -42,9 +42,10 @@ export default TopBar;
 
 const styles = {
 	topbar: {
-		backgroundColor: "#f5b314",
+		backgroundColor: "#f2f2f2",
 		px: [0, null, null, null, 0],
 		py: ["1rem", "0.7rem"],
+		borderBottom: "0.5px solid rgba(0, 0, 0, 0.1)",
 	},
 	gmaps: {
 		mt: ["1rem", 0],
@@ -52,9 +53,8 @@ const styles = {
 	content: {
 		display: "flex",
 		flexDirection: ["column", "row"],
-		alignItems: ["center", "start"],
+		alignItems: "start",
 		justifyContent: ["space-around", null, null, "center", "space-between"],
-		color: "white",
 		fontSize: ["13px"],
 		fontWeight: 400,
 		maxWidth: 780,
@@ -66,11 +66,12 @@ const styles = {
 			},
 		},
 		".caption": {
+			// Border left
+			borderLeft: "0.5px solid rgba(0, 0, 0, 0.1)",
 			display: "inline-flex",
 			alignItems: "center",
 			backgroundColor: "rgba(255, 255, 255, 0.1)",
-			borderRadius: "5px",
-			color: "white",
+			color: "gray",
 			fontWeight: 500,
 			justifyContent: "center",
 			lineHeight: "1",
@@ -95,7 +96,7 @@ const styles = {
 		},
 
 		a: {
-			color: "#fff",
+			color: "gray",
 			cursor: "pointer",
 			fontSize: ["12px"],
 			alignItems: "center",
