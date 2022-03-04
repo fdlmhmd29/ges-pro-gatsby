@@ -10,11 +10,36 @@ module.exports = {
 		siteUrl: `https://ges-consultant.co.id`,
 	},
 	plugins: [
-		`gatsby-plugin-sitemap`,
 		"gatsby-plugin-postcss",
 		"gatsby-plugin-theme-ui",
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-image`,
+		{
+			resolve: "gatsby-plugin-sitemap",
+			options: {
+				query: `
+			  {
+				allSitePage {
+				  nodes {
+					path
+				  }
+				}
+			  }
+			`,
+				resolveSiteUrl: () => siteUrl,
+				resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+					return allPages.map(page => {
+						return { ...page, ...wpNodeMap[page.path] };
+					});
+				},
+				serialize: ({ path, modifiedGmt }) => {
+					return {
+						url: path,
+						lastmod: modifiedGmt,
+					};
+				},
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
