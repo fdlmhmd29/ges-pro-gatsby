@@ -31,7 +31,7 @@ module.exports = {
 				resolveSiteUrl: () => siteUrl,
 				resolvePages: ({ allSitePage: { nodes: allPages } }) => {
 					return allPages.map(page => {
-						return { ...page, ...wpNodeMap[page.path] };
+						return { ...page };
 					});
 				},
 				serialize: ({ path, modifiedGmt }) => {
