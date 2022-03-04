@@ -10,6 +10,7 @@ module.exports = {
 		siteUrl: `https://ges-consultant.co.id`,
 	},
 	plugins: [
+		`gatsby-plugin-sitemap`,
 		"gatsby-plugin-postcss",
 		"gatsby-plugin-theme-ui",
 		`gatsby-plugin-react-helmet`,

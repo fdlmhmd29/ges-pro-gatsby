@@ -21,6 +21,7 @@
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-robots-txt": "^1.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-plugin-sitemap": "^5.9.0",
     "gatsby-plugin-theme-ui": "^0.13.1",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-graphcms": "^2.8.0",
