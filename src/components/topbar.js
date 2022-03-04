@@ -44,8 +44,8 @@ const styles = {
 	topbar: {
 		backgroundColor: "#f2f2f2",
 		px: [0, null, null, null, 0],
-		py: ["1rem", "0.7rem"],
-		borderBottom: "0.5px solid rgba(0, 0, 0, 0.1)",
+		py: ["0.5rem", "0.3rem"],
+		borderBottom: "0.1px solid rgba(0, 0, 0, 0.1)",
 	},
 	gmaps: {
 		mt: ["1rem", 0],

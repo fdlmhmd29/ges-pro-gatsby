@@ -13,7 +13,9 @@ import { rgba } from "polished";
 import { useState, useRef, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { EffectFade } from "swiper";
+import "swiper/css/bundle";
+import "swiper/css/effect-fade";
 
 // Images
 import { slider1, slider2, slider3, slider4 } from "../images";
@@ -124,11 +126,11 @@ const Banner = () => {
 						/>
 						<Swiper
 							loop={true}
-							effect="fade"
 							ref={swiperRef}
 							spaceBetween={0}
 							slidesPerView={1}
-							pagination={true}
+							modules={[EffectFade]}
+							effect="fade"
 						>
 							{data?.gallery?.map(item => (
 								<SwiperSlide key={item.id}>
