@@ -26,7 +26,7 @@ function Services() {
 			<Container>
 				<SectionHeading
 					slogan="Jasa layanan kami"
-					title="Mencakup berbagai macam kebutuhan"
+					title="Mencakup berbagai macam kebutuhan penyusunan dokumen lingkungan"
 				/>
 				<Grid sx={styles.serviceGrid}>
 					{services.nodes.map(service => (
