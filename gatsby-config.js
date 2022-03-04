@@ -2,6 +2,8 @@ require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
+const siteUrl = `https://www.ges-consultant.co.id/`;
+
 module.exports = {
 	siteMetadata: {
 		title: `PT Greenfield Environment Solution`,
