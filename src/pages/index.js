@@ -11,6 +11,7 @@ import {
 	BlogSection,
 	Profile,
 	Sertificate,
+	CallToAction,
 } from "../components";
 
 import "react-multi-carousel/lib/styles.css";
@@ -25,6 +26,7 @@ const IndexPage = () => (
 		<TeamSection />
 		<Sertificate />
 		<Clients />
+		<CallToAction />
 		<BlogSection />
 	</Layout>
 );

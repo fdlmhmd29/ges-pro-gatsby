@@ -2,6 +2,10 @@
 import Logo from "../images/logo.png";
 import LogoWhite from "../images/logo-white.png";
 
+// Call to action
+import button from "../images/sections/cta/button.svg";
+import shape from "../images/sections/cta/shape.svg";
+
 // Banner
 import slider1 from "../images/sections/banner/1.svg";
 import slider2 from "../images/sections/banner/2.svg";
@@ -45,4 +49,6 @@ export {
 	slider2,
 	slider3,
 	slider4,
+	button,
+	shape,
 };

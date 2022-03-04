@@ -19,3 +19,4 @@ export { default as TeamSection } from "../section/team-section";
 export { default as BlogSection } from "../section/blog-section";
 export { default as Profile } from "../section/profile";
 export { default as Sertificate } from "../section/Sertificate";
+export { default as CallToAction } from "../section/call-to-action";
