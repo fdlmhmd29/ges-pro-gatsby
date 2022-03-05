@@ -6,7 +6,7 @@ const siteUrl = `https://www.ges-consultant.co.id/`;
 
 module.exports = {
 	siteMetadata: {
-		title: `PT Greenfield Environment Solution`,
+		title: `Jasa Penyusunan Dokumen Lingkungan`,
 		description: `Situs Profil Perusahaan PT Greenfield Environment Solution Company yang bergerak di bidang pengembangan dan pengelolaan lingkungan.`,
 		author: `@fdlmhmd29`,
 		siteUrl: `https://ges-consultant.co.id`,
