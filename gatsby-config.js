@@ -114,7 +114,8 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://ges-consultant.co.id",
-				sitemap: "https://ges-consultant.co.id/sitemap.xml",
+				sitemap:
+					"https://www.ges-consultant.co.id/sitemap/sitemap-index.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
