@@ -8,8 +8,8 @@ const TopBar = () => {
 	return (
 		<Box as="section" sx={styles.topbar}>
 			<Container sx={styles.content}>
-				<Box as={"div"}>
-					<Text as="span" className="caption">
+				<Box as={"div"} sx={styles.contact}>
+					<Text as="span" sx={styles.email} className="caption">
 						<MdEmail size={18} />{" "}
 						<a href="mailto:pt.greenfield@gmail.com">
 							pt.greenfield@gmail.com
@@ -50,6 +50,15 @@ const styles = {
 	gmaps: {
 		mt: ["1rem", 0],
 	},
+	contact: {
+		display: "flex",
+		alignItems: "start",
+		flexDirection: ["column", "row"],
+	},
+	email: {
+		marginRight: [0, 4],
+		marginBottom: [4, 0],
+	},
 	content: {
 		display: "flex",
 		flexDirection: ["column", "row"],
@@ -60,11 +69,7 @@ const styles = {
 		maxWidth: 780,
 		m: "0 auto",
 		textAlign: "center",
-		span: {
-			"+ span": {
-				ml: [4],
-			},
-		},
+
 		".caption": {
 			// Border left
 			borderLeft: "0.5px solid rgba(0, 0, 0, 0.1)",
