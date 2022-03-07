@@ -18,7 +18,7 @@ import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 
 // Images
-import { slider1, slider2, slider3, slider4 } from "../images";
+import { slider1, slider2, slider3, slider4, bannerBg } from "../images";
 
 // Components
 import Progressbar from "../components/progressbar";
@@ -94,7 +94,7 @@ const Banner = () => {
 	};
 
 	return (
-		<Box id="beranda" as="section">
+		<Box id="beranda" as="section" sx={styles.bannerBg}>
 			<Container>
 				<Box sx={styles.contentWrapper}>
 					<Box sx={styles.content}>
@@ -162,6 +162,9 @@ const Banner = () => {
 export default Banner;
 
 const styles = {
+	bannerBg: {
+		background: `transparent url(${bannerBg}) no-repeat center top / cover`,
+	},
 	contentWrapper: {
 		display: [null, null, null, "grid"],
 		gridTemplateColumns: [

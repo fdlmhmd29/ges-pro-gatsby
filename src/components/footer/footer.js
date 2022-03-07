@@ -13,7 +13,7 @@ export default function Footer() {
 			<Box id="map-wrapper" as={"div"} sx={styles.mapArea}>
 				<iframe
 					title="Lokasi PT. Greenfield Environment Solution"
-					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3965.8423555183867!2d106.8443231!3d-6.2844437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f26b998157e5%3A0x1c00c5eb4d033c80!2sWest%20Pejaten%2C%20Pasar%20Minggu%2C%20South%20Jakarta%20City%2C%20Jakarta%2012510!5e0!3m2!1sen!2sid!4v1646296877320!5m2!1sen!2sid"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3167.610371875004!2d106.8449441178898!3d-6.289336271706859!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x415c08f43fbfbb47!2sPT.%20Greenfield%20Environment%20Solution!5e0!3m2!1sen!2sid!4v1646507903092!5m2!1sen!2sid"
 					className="map"
 					loading="lazy"
 				></iframe>

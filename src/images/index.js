@@ -11,6 +11,7 @@ import slider1 from "../images/sections/banner/1.svg";
 import slider2 from "../images/sections/banner/2.svg";
 import slider3 from "../images/sections/banner/3.svg";
 import slider4 from "../images/sections/banner/4.svg";
+import bannerBg from "../images/sections/banner/banner-bg.svg";
 
 // Clients
 import bridgestone from "./sections/banner/bridgestone.webp";
@@ -51,4 +52,5 @@ export {
 	slider4,
 	button,
 	shape,
+	bannerBg,
 };
