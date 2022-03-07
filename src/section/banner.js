@@ -162,9 +162,9 @@ const Banner = () => {
 export default Banner;
 
 const styles = {
-	bannerBg: {
-		background: `transparent url(${bannerBg}) no-repeat center top / cover`,
-	},
+	// bannerBg: {
+	// 	background: `transparent url(${bannerBg}) no-repeat center top / cover`,
+	// },
 	contentWrapper: {
 		display: [null, null, null, "grid"],
 		gridTemplateColumns: [
