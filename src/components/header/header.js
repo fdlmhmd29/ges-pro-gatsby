@@ -176,7 +176,7 @@ const styles = {
 			cursor: "pointer",
 			fontWeight: 400,
 			padding: 0,
-			margin: "0 20px",
+			margin: "0 0 0 40px",
 
 			"&:hover": {
 				textDecoration: "underline",

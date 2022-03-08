@@ -222,22 +222,6 @@ const styles = {
 		position: "relative",
 		mt: [6, 6, 6, 6, 6],
 		maxWidth: "100%",
-		".swiper-pagination-bullets": {
-			bottom: 20,
-		},
-		".swiper-pagination-bullet": {
-			backgroundColor: "rgba(255,255,255,0.5)",
-			width: 10,
-			height: 10,
-			opacity: 1,
-			mx: 5,
-			":focus": {
-				outline: 0,
-			},
-		},
-		".swiper-pagination-bullet-active": {
-			backgroundColor: "rgba(255,255,255,1)",
-		},
 	},
 	progressbar: {
 		position: "absolute",
